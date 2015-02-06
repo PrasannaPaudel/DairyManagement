@@ -1,0 +1,7 @@
+org\muthaka\dairy\controller\RedirectController.class
+org\muthaka\dairy\Generators\UuidGen.class
+org\muthaka\dairy\Models\Staff.class
+org\muthaka\dairy\Listener\Log4jContextListener.class
+org\muthaka\dairy\controller\MainController.class
+org\muthaka\dairy\controller\WebController.class
+org\muthaka\dairy\Listener\HibernateServletContextListener.class
