@@ -55,7 +55,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="dairyAdmin.jsp">Dairy-Farm-Management</a>
+            <a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -69,7 +69,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><strong>Firm-Admin</strong>
+                                    <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
                                     </h5>
                                     <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                     <p></p>
@@ -84,7 +84,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><strong>Firm-Admin</strong>
+                                    <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
                                     </h5>
                                     <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                     <p></p>
@@ -154,39 +154,54 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li class="active">
-                    <a href="dairyAdmin.jsp"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    <a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+                    <a href="${contextPath}/dairyAdmin/viewHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
+                    <a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
+                    <a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
+                    <a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-bitbucket"></i> Sell Milk</a>
+                    <a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health Information</a>
+                </li>
+                <li>
+                    <a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="demo" class="collapse">
                         <li>
-                            <a href="#">Dropdown Item</a>
+                            <a href="${contextPath}/dairyAdmin/userRegistration">Register A user</a>
                         </li>
                         <li>
-                            <a href="#">Dropdown Item</a>
+                            <a href="${contextPath}/dairyAdmin/staffRegistration">Register A Staff</a>
+                        </li>
+                        <li>
+                            <a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
+                        </li>
+                        <li>
+                            <a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
+                        </li>
+                        <li>
+                            <a href="${contextPath}/dairyAdmin/customerRegistration">Register a Customer</a>
+                        </li>
+                        <li>
+                            <a href="${contextPath}/dairyAdmin/viewCustomer">View Customer</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                    <a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
                 </li>
                 <li>
-                    <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                    <a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
                 </li>
             </ul>
         </div>
@@ -224,165 +239,210 @@
                 <!-- /.row -->
 
 
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
+            <div class="row" >
+                <div class="col-lg-3 col-md-6" >
+                    <a href="${contextPath}/dairyAdmin/viewHealth">
+                    <div class="panel panel-hh">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-ambulance fa-5x"></i>
+                                    <i class=""></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge">1</div>
                                     <div>Health Information</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+
                             <div class="panel-footer">
                                 <span class="pull-left">View Information</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
-                        </a>
+
                     </div>
+                    </a>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
+                    <a href="${contextPath}/dairyAdmin/viewMilkProduction">
+                    <div class="panel panel-yellow" >
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-bitbucket fa-5x"></i>
+                                    <i class=""></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge">2</div>
                                     <div>Milk Production</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+
                             <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
+                                <span class="pull-left">View Milk Production</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
-                        </a>
+
                     </div>
+                    </a>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
+                    <a href="${contextPath}/dairyAdmin/viewBreeding">
+                    <div class="panel panel-tt">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-toggle-off fa-5x"></i>
+                                    <i class=""></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge">3</div>
                                     <div>Breeding Information</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+
                             <div class="panel-footer">
                                 <span class="pull-left">View Information</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
-                        </a>
+
                     </div>
+                    </a>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
+                    <a href="${contextPath}/dairyAdmin/viewMilkSold">
                     <div class="panel panel-red">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-user fa-5x"></i>
+                                    <i class=""></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Customer Information</div>
+                                    <div class="huge">4</div>
+                                    <div>Milk Info</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+
+                            <div class="panel-footer">
+                                <span class="pull-left">Customer Milk Info</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+
+                    </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="${contextPath}/dairyAdmin/viewFinance">
+                    <div class="panel panel-black">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-money fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">5</div>
+                                    <div>Finance Records</div>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="panel-footer">
                                 <span class="pull-left">View Information</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
-                        </a>
+
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-user fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-left">
-                                <div class="huge">13</div>
-                                <div>Monitor Finance Records</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Information</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
                     </a>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-red">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-user fa-5x"></i>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="${contextPath}/dairyAdmin/viewCowsHerd">
+                    <div class="panel panel-white">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class=""></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">6</div>
+                                    <div>Monitor Dairy Herd</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xs-9 text-left">
-                            <div class="huge">13</div>
-                            <div>Monitor Dairy Herd</div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">View Information</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="${contextPath}/dairyAdmin/viewFeeds">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class=""></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">7</div>
+                                    <div>Feed Records</div>
+                                </div>
+                            </div>
                         </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">View Information</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+
                     </div>
+                        </a>
                 </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Information</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="${contextPath}/dairyAdmin/viewWorkers">
+                    <div class="panel panel-pp">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class=""></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">8</div>
+                                    <div>Workers information</div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">View Information</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+
                     </div>
-                </a>
+                        </a>
+                </div>
+
             </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-user fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-left">
-                        <div class="huge">13</div>
-                        <div>Monitor Feed Records</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">View Information</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
 <!-- /.row -->
 
 <div class="row">

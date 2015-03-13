@@ -1,107 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - cms@localhost" uuid="ae137987-f44e-49d5-bc19-d4913d2f3ec3">
+  <data-source name="MySQL - dairyfarm@localhost" uuid="a6c26cc7-1ddf-4c8c-b4d9-8b217f7e5d86">
     <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="cms"/>
-    <table name="baptism" schema="" catalog="cms" type="TABLE">
-      <column name="baptismId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="baptismUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="datOfBirth" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="childsNames" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="proposedChildsName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="fathersNames" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="mothersNames" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="guardianNames" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="postalAddress" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="fatherContact" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="mothersContact" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="residentialEstate" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentsBaptism" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="parentsParish" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="otherParishConcent" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="otherParishAuthority" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="baptismId"/>
-      <exported-key name="Godparent_fk" table="baptismgodparents" schema="" catalog="cms" columns="childsGodParent"/>
-      <exported-key name="thanksgiving_fk" table="baptismthanksgiving" schema="" catalog="cms" columns="childUuid"/>
-      <index name="baptismUuid" unique="true" columns="baptismUuid"/>
+    <schema name="" catalog="dairyfarm"/>
+    <table name="breeding" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="breedId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="semenType" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameOfSeminator" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="breedingCost" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="breedId"/>
+      <foreign-key name="breedCowIdFK" columns="cowId" ref-table="cowregistration" ref-schema="" ref-catalog="dairyfarm" ref-columns="cowId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="breedCowIdFK" unique="false" columns="cowId"/>
     </table>
-    <table name="baptismgodparents" schema="" catalog="cms" type="TABLE">
-      <column name="baptismGodParentsId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="baptismGodParentsUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentsName1" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentsName2" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentChurch" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="baptismGodParentPostalAddress" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentResidentialAddress" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentMarriageDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="baptismGodParentMarriagePlace" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="baptismGodParentfatherapproval" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="baptismGodParentmotherapproval" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="clusterLeaderName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="clusterLeaderApproval" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="childsGodParent" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="baptismGodParentsId"/>
-      <foreign-key name="Godparent_fk" columns="childsGodParent" ref-table="baptism" ref-schema="" ref-catalog="cms" ref-columns="baptismUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="baptismGodParentsUuid" unique="true" columns="baptismGodParentsUuid"/>
-      <index name="Godparent_fk" unique="false" columns="childsGodParent"/>
+    <table name="cowregistration" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="cowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="breed" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="relatedTo" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Relationship" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="cowId"/>
+      <exported-key name="breedCowIdFK" table="breeding" schema="" catalog="dairyfarm" columns="cowId"/>
+      <exported-key name="feedsCowIdFK" table="dairyfeeds" schema="" catalog="dairyfarm" columns="cowId"/>
+      <exported-key name="healthCowIdFK" table="healthrecords" schema="" catalog="dairyfarm" columns="cowId"/>
+      <exported-key name="milkCowIdFK" table="milkproduction" schema="" catalog="dairyfarm" columns="cowId"/>
     </table>
-    <table name="baptismthanksgiving" schema="" catalog="cms" type="TABLE">
-      <column name="baptismThanksGivingId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="baptismThanksGivingUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="amountPaid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="datePaid" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
-      <column name="paidTo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="baptismThanksGivingId"/>
-      <foreign-key name="thanksgiving_fk" columns="childUuid" ref-table="baptism" ref-schema="" ref-catalog="cms" ref-columns="baptismUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="baptismThanksGivingUuid" unique="true" columns="baptismThanksGivingUuid"/>
-      <index name="thanksgiving_fk" unique="false" columns="childUuid"/>
+    <table name="customers" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="customerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="customerName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="customerType" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="customerId"/>
+      <exported-key name="customerIdFK" table="milksold" schema="" catalog="dairyfarm" columns="customerId"/>
     </table>
-    <table name="churchgroups" schema="" catalog="cms" type="TABLE">
-      <column name="churchGroupId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="churchGroupUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="churchGroupName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="churchGroupDesc" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="churchGroupId"/>
-      <exported-key name="churchgroup_fk" table="person" schema="" catalog="cms" columns="personChurchGroup"/>
-      <index name="churchGroupUuid" unique="true" columns="churchGroupUuid"/>
+    <table name="dairyfeeds" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="dairyId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mealType" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="quantity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="dairyId"/>
+      <foreign-key name="feedsCowIdFK" columns="cowId" ref-table="cowregistration" ref-schema="" ref-catalog="dairyfarm" ref-columns="cowId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="feedsCowIdFK" unique="false" columns="cowId"/>
     </table>
-    <table name="confirmation" schema="" catalog="cms" type="TABLE">
-      <column name="confirmationId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="confirmationUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confimationApplicantBaptismName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confimationApplicantOtherName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confirmationApplicantDob" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="confirmationApplicantBaptismDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="nameOfApplicantsBaptismChurch" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="applicantGodParent1name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="applicantGodParent2name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="applicantParent1name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="applicantParent2name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confirmationDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <primary-key name="PRIMARY" columns="confirmationId"/>
-      <exported-key name="confirmation_fk" table="confirmationpayment" schema="" catalog="cms" columns="confirmationUuid"/>
-      <index name="confirmationUuid" unique="true" columns="confirmationUuid"/>
-    </table>
-    <table name="confirmationpayment" schema="" catalog="cms" type="TABLE">
-      <column name="confirmationPaymentId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="confirmationPaymentUuid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="confirmationUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confirmationDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="confirmationPaymentAmount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="confirmationPaymentReceiptNo" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="confirmationPaymentReceiptDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <primary-key name="PRIMARY" columns="confirmationPaymentId"/>
-      <foreign-key name="confirmation_fk" columns="confirmationUuid" ref-table="confirmation" ref-schema="" ref-catalog="cms" ref-columns="confirmationUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="confirmationPaymentUuid" unique="true" columns="confirmationPaymentUuid"/>
-      <index name="confirmation_fk" unique="false" columns="confirmationUuid"/>
-    </table>
-    <table name="databasechangelog" schema="" catalog="cms" type="TABLE">
+    <table name="databasechangelog" schema="" catalog="dairyfarm" type="TABLE">
       <column name="ID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="AUTHOR" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="FILENAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -114,154 +63,117 @@
       <column name="TAG" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="LIQUIBASE" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
     </table>
-    <table name="databasechangeloglock" schema="" catalog="cms" type="TABLE">
+    <table name="databasechangeloglock" schema="" catalog="dairyfarm" type="TABLE">
       <column name="ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="LOCKED" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="LOCKGRANTED" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="LOCKEDBY" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="ID"/>
     </table>
-    <table name="person" schema="" catalog="cms" type="TABLE">
-      <column name="personId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="personUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personTitle" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personSecondname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personLastname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personGender" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personIdnumber" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="personMaritalStatus" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personOccupation" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personChurchStatus" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personResidence" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personTalents" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personPhonenumber" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="personEmail" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personBoxNumber" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="personDateOfBirth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
-      <column name="personNextOfKinFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personNextOfKinSecondname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="personNextOfKinContacts" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="personDateCreated" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
-      <column name="personChurchGroup" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="personId"/>
-      <foreign-key name="churchgroup_fk" columns="personChurchGroup" ref-table="churchgroups" ref-schema="" ref-catalog="cms" ref-columns="churchGroupUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="personIdFK" table="staff" schema="" catalog="cms" columns="personId"/>
-      <exported-key name="personUUIDFK" table="staff" schema="" catalog="cms" columns="staffUuid"/>
-      <index name="personUuid" unique="true" columns="personUuid"/>
-      <index name="churchgroup_fk" unique="false" columns="personChurchGroup"/>
+    <table name="financialrecords" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="recordId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="feedingCost" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="BreedingCost" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="treatmentCost" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="WorkersCost" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="totalExpenditure" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="totalIncome" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="profit" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="loss" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="recordId"/>
     </table>
-    <table name="pettycash" schema="" catalog="cms" type="TABLE">
-      <column name="pettycashId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="pettycashUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pettycashReason" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pettycashAmount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="pettycashAuthoriser" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pettycashReceiver" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="pettycashId"/>
-      <foreign-key name="authority" columns="pettycashAuthoriser" ref-table="staff" ref-schema="" ref-catalog="cms" ref-columns="staffUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="pettycashUuid" unique="true" columns="pettycashUuid"/>
-      <index name="authority" unique="false" columns="pettycashAuthoriser"/>
+    <table name="healthrecords" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="healthId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="diseaseType" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="symptoms" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="medicine" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="treatmentCost" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="healthId"/>
+      <foreign-key name="healthCowIdFK" columns="cowId" ref-table="cowregistration" ref-schema="" ref-catalog="dairyfarm" ref-columns="cowId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="healthCowIdFK" unique="false" columns="cowId"/>
     </table>
-    <table name="requistion" schema="" catalog="cms" type="TABLE">
-      <column name="requistionId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="requistionUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionReceiver" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionAmount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="requistionAmountPassing" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="requistionAmountNeedDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="requistionDeptChairperson" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionP.warden" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionVicarAuthority" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="requistionVicar" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="requistionId"/>
-      <exported-key name="requistion_fk" table="requistiondesc" schema="" catalog="cms" columns="requistionUuid"/>
-      <index name="requistionUuid" unique="true" columns="requistionUuid"/>
+    <table name="milkproduction" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="milkId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="time" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="amountProduced" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="milkId"/>
+      <foreign-key name="milkCowIdFK" columns="cowId" ref-table="cowregistration" ref-schema="" ref-catalog="dairyfarm" ref-columns="cowId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="milkCowIdFK" unique="false" columns="cowId"/>
     </table>
-    <table name="requistiondesc" schema="" catalog="cms" type="TABLE">
-      <column name="requistionDescId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="requistionDescUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionDescription" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="requistionDescAmount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="requistionDescId"/>
-      <foreign-key name="requistion_fk" columns="requistionUuid" ref-table="requistion" ref-schema="" ref-catalog="cms" ref-columns="requistionUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="requistionDescUuid" unique="true" columns="requistionDescUuid"/>
-      <index name="requistion_fk" unique="false" columns="requistionUuid"/>
+    <table name="milksold" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="sellId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="customerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="time" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="quantity" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="cost" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="total" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="sellId"/>
+      <foreign-key name="customerIdFK" columns="customerId" ref-table="customers" ref-schema="" ref-catalog="dairyfarm" ref-columns="customerId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="customerIdFK" unique="false" columns="customerId"/>
     </table>
-    <table name="schoolchildrendetails" schema="" catalog="cms" type="TABLE">
-      <column name="childId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="childUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childFirstName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childSecondName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childLastName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="childGender" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childReligion" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childNationality" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childDateofBirth" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="childDateofAdmision" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
-      <column name="childHealthInfo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childCongenitalAbonomality" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childSchoolState" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="J0luIFNjaG9vbCc="/>
-      <column name="childAdmittedBy" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="childGuardian" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="childId"/>
-      <foreign-key name="admisssion_fk" columns="childAdmittedBy" ref-table="staff" ref-schema="" ref-catalog="cms" ref-columns="staffUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="guardian_fk" columns="childGuardian" ref-table="schoolparents" ref-schema="" ref-catalog="cms" ref-columns="parentUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="childUuid" unique="true" columns="childUuid"/>
-      <index name="admisssion_fk" unique="false" columns="childAdmittedBy"/>
-      <index name="guardian_fk" unique="false" columns="childGuardian"/>
-    </table>
-    <table name="schoolparents" schema="" catalog="cms" type="TABLE">
-      <column name="parentId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="parentUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentFirstName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentSecondName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentLastName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentLocality" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentHouseName" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentHouseNumber" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentOccupation" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentPhonenumber1" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentPhonenumber2" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentAddress" sqlType="VARCHAR" precision="70" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentEmailAddress" sqlType="VARCHAR" precision="70" scale="0" nullable="true" jdbcType="12"/>
-      <column name="parentIdNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="parentNextofKinNames" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentNextofKinRelationship" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="parentNextofKinPhonenumber" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="parentId"/>
-      <exported-key name="guardian_fk" table="schoolchildrendetails" schema="" catalog="cms" columns="childGuardian"/>
-      <index name="parentUuid" unique="true" columns="parentUuid"/>
-    </table>
-    <table name="staff" schema="" catalog="cms" type="TABLE">
-      <column name="personId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+    <table name="staff" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="userId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="staffUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffUsername" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffPassword" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffWorkNumber" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffCreatedBy" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffRetired" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <column name="staffDateRetired" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="staffRetiredBy" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="personId"/>
-      <foreign-key name="personIdFK" columns="personId" ref-table="person" ref-schema="" ref-catalog="cms" ref-columns="personId" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="personUUIDFK" columns="staffUuid" ref-table="person" ref-schema="" ref-catalog="cms" ref-columns="personUuid" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="authority" table="pettycash" schema="" catalog="cms" columns="pettycashAuthoriser"/>
-      <exported-key name="admisssion_fk" table="schoolchildrendetails" schema="" catalog="cms" columns="childAdmittedBy"/>
-      <exported-key name="username_fk" table="userroles" schema="" catalog="cms" columns="staffUsername"/>
-      <index name="staffUsername" unique="true" columns="staffUsername"/>
-      <index name="staffWorkNumber" unique="true" columns="staffWorkNumber"/>
+      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="workNumber" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="createdBy" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="retired" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="dateRetired" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="userId"/>
+      <foreign-key name="staffIDFK" columns="staffUuid" ref-table="users" ref-schema="" ref-catalog="dairyfarm" ref-columns="userUuid" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="userIdFK" columns="userId" ref-table="users" ref-schema="" ref-catalog="dairyfarm" ref-columns="userId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="username_fk" table="userroles" schema="" catalog="dairyfarm" columns="username"/>
+      <index name="username" unique="true" columns="username"/>
+      <index name="workNumber" unique="true" columns="workNumber"/>
     </table>
-    <table name="userroles" schema="" catalog="cms" type="TABLE">
+    <table name="userroles" schema="" catalog="dairyfarm" type="TABLE">
       <column name="userRoleId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="userRoleUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="staffUsername" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
       <column name="ROLE" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="userRoleId"/>
-      <foreign-key name="username_fk" columns="staffUsername" ref-table="staff" ref-schema="" ref-catalog="cms" ref-columns="staffUsername" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="username_fk" columns="username" ref-table="staff" ref-schema="" ref-catalog="dairyfarm" ref-columns="username" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="userRoleUuid" unique="true" columns="userRoleUuid"/>
-      <index name="username_fk" unique="false" columns="staffUsername"/>
+      <index name="username_fk" unique="false" columns="username"/>
+    </table>
+    <table name="users" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="userId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="userUuid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="firstname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="secondname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12"/>
+      <column name="idnumber" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="residence" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phonenumber" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dateOfBirth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="nextOfKinFirstname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nextOfKinSecondname" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nextOfKinContacts" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="dateCreated" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="userId,userUuid"/>
+      <exported-key name="staffIDFK" table="staff" schema="" catalog="dairyfarm" columns="staffUuid"/>
+      <exported-key name="userIdFK" table="staff" schema="" catalog="dairyfarm" columns="userId"/>
+      <exported-key name="workerUserIdFK" table="workers" schema="" catalog="dairyfarm" columns="userId"/>
+      <index name="userUuid" unique="true" columns="userUuid"/>
+    </table>
+    <table name="workers" schema="" catalog="dairyfarm" type="TABLE">
+      <column name="workerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="userId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="amountPaid" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="duty" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="paymentDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="workerId"/>
+      <foreign-key name="workerUserIdFK" columns="userId" ref-table="users" ref-schema="" ref-catalog="dairyfarm" ref-columns="userId" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="workerUserIdFK" unique="false" columns="userId"/>
     </table>
   </data-source>
 </component>

@@ -5,7 +5,14 @@
   Time: 7:09 PM
   To change this template use File | Settings | File Templates.
 --%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@page session="true" %>
+<%@ page import="java.sql.*" %>
+<%ResultSet resultset =null;%>
+
 <html lang="en">
 
 <head>
@@ -17,6 +24,9 @@
   <meta name="author" content="">
 
   <title>Cow-Registration </title>
+
+    <!-- date picker CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="${pageContext.request.contextPath}/resources/css/jsDatePick_ltr.min.css" />
 
   <!-- Bootstrap Core CSS -->
   <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -32,11 +42,47 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+
+  <script type="text/javascript">
+      window.onload = function(){
+          new JsDatePick({
+              useMode:2,
+              target:"dob",
+              dateFormat:"%d-%M-%Y"
+              /*selectedDate:{				This is an example of what the full configuration offers.
+               day:5,						For full documentation about these settings please see the full version of the code.
+               month:9,
+               year:2006
+               },
+               yearsRange:[1978,2020],
+               limitToToday:false,
+               cellColorScheme:"beige",
+               dateFormat:"%m-%d-%Y",
+               imgPath:"img/",
+               weekStartDay:1*/
+          });
+      };
+  </script>
+
   <![endif]-->
+    <c:url var="addAction" value="/dairyAdmin/registerCows/save"/>
+    <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+    <c:url var="logout" value="/j_spring_security_logout"/>
+
 
 </head>
 
-<body>
+
+<body >
+<%
+    try{
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairyFarm?user=root&password=root");
+        Statement statement = connection.createStatement() ;
+        resultset =statement.executeQuery("select * from cowregistration") ;
+%>
+
 
 <div id="wrapper">
 
@@ -50,7 +96,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="dairyAdmin.jsp">Dairy-Farm-Management</a>
+      <a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -64,7 +110,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                 <div class="media-body">
-                  <h5 class="media-heading"><strong>Firm-Admin</strong>
+                  <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
                   </h5>
                   <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                   <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -79,7 +125,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                 <div class="media-body">
-                  <h5 class="media-heading"><strong>Firm-Admin</strong>
+                  <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
                   </h5>
                   <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                   <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -94,7 +140,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                 <div class="media-body">
-                  <h5 class="media-heading"><strong>Firm-Admin</strong>
+                  <h5 class="media-heading"><strong>${dairyAdminNm}</strong>
                   </h5>
                   <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                   <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -135,7 +181,7 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Firm-Admin <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${dairyAdminNm} <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li>
             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -156,40 +202,43 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
-        <li>
-          <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+        <li >
+          <a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
         </li>
         <li class="active">
-          <a href="#"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+          <a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
+          <a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
+          <a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
+          <a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
         </li>
+          <li>
+              <a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health Information</a>
+          </li>
         <li>
-          <a href="#"><i class="fa fa-bitbucket"></i> Sell Milk</a>
+          <a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
         </li>
         <li>
           <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
           <ul id="demo" class="collapse">
             <li>
-              <a href="#">Dropdown Item</a>
+              <a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
             </li>
             <li>
-              <a href="#">Dropdown Item</a>
+              <a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+          <a href="#"><i class="fa fa-fw fa-file"></i> Blank Page</a>
         </li>
         <li>
-          <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+          <a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
         </li>
       </ul>
     </div>
@@ -208,7 +257,7 @@
           </h1>
           <ol class="breadcrumb">
             <li>
-              <i class="fa fa-dashboard"></i>  <a href="dairyAdmin.jsp">Dashboard</a>
+              <i class="fa fa-dashboard"></i>  <a href="${contextPath}/dairyAdmin">Dashboard</a>
             </li>
             <li class="active">
               <i class="fa fa-edit"></i> Forms
@@ -219,79 +268,128 @@
       <!-- /.row -->
 
       <div class="row">
+          <form role="form"  action="${addAction}" commandName="cowRegistration" method="post">
         <div class="col-lg-6">
-
-          <form role="form">
-
-
 
             <div class="form-group">
               <label>Breed</label>
-              <select class="form-control">
-                <option>Gersey</option>
-                <option>Fresian</option>
-                <option>Zebu</option>
+              <select class="form-control" name="breed" id="breed">
+                <option value="Holstein Friesian">Holstein Friesian</option>
+                <option value="Brown Swiss">Brown Swiss</option>
+                <option value="Ayrshire">Ayrshire</option>
+                  <option value="Jersey">Jersey</option>
+                  <option value="Guernsey">Guernsey</option>
 
               </select>
             </div>
 
             <div class="form-group">
               <label>Gender</label>
-              <select class="form-control">
-                <option>Male</option>
-                <option>Female</option>
+              <select class="form-control" name="gender" id="gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
 
               </select>
             </div>
 
             <div class="form-group">
-              <label>Date of Birth</label>
-              <input class="form-control">
+                <label>Date of Birth</label>
+                <input class="form-control" type="date" name="dob" id="dob">
             </div>
-
-
-
-
-
-
-          </form>
 
         </div>
 
 
         <div class="col-lg-6">
 
-          <form role="form">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="">
-                <p>is the cow Related to the Herd?</p>
-              </label>
+            <div class="form-group">
+                <label>Related-To</label>
+                <select class="form-control" name="relatedTo" id="relatedTo">
+                    <option value="">Not Related</option>
+                    <%  while(resultset.next()){ %>
+                    <option value="<%= resultset.getString(1)%>"><%= resultset.getString(1)%></option>
+                    <% } %>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Relationship</label>
+                <select class="form-control" name="relationship" id="relationship">
+                    <option value="">No Relationship</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Daughter">Daughter</option>
+                    <option value="GrandDaughter">GrandDaughter</option>
+
+                </select>
             </div>
 
 
+            <button type="submit" class="btn btn-default" id="saveData">Submit Button</button>
+            <button type="reset" class="btn btn-default" id="reset">Reset Button</button>
 
-            <fieldset disabled>
 
-              <div class="form-group">
-                <label>Related-To</label>
-                <input class="form-control" placeholder="Enter text">
-              </div>
-
-              <div class="form-group">
-                <label>Relationship</label>
-                <input class="form-control">
-              </div>
-
-            </fieldset>
-            <button type="submit" class="btn btn-default">Submit Button</button>
-            <button type="reset" class="btn btn-default">Reset Button</button>
-
-          </form>
 
         </div>
+          </form>
+
       </div>
       <!-- /.row -->
+
+        <!-- /.display row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>
+                    </div>
+                    <c:if test="${!empty listCows}">
+                        <table class="table table-bordered table-hover table-striped" id="dairyCows">
+
+                            <thead>
+                            <tr>
+                                <th>Cow-Id</th>
+                                <th>Breed</th>
+                                <th>Gender</th>
+                                <th>Date of Birth</th>
+                                <th>Related-To</th>
+                                <th>Relationship</th>
+                                <th>Date Registered</th>
+                                <th width="40px"></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${listCows}" var="dairyCows">
+                                <tr>
+                                    <td>${dairyCows.cowId}</td>
+                                    <td>${dairyCows.breed}</td>
+                                    <td>${dairyCows.gender}</td>
+                                    <td>${dairyCows.dob}</td>
+                                    <td>${dairyCows.relatedTo}</td>
+                                    <td>${dairyCows.relationship}</td>
+                                    <td>${dairyCows.date}</td>
+                                    <td width="40px">
+                                        <a href="<c:url value="/dairyAdmin/registerCows/remove/${dairyCows.cowId}"/>"
+                                           class="btn btn-sm btn-danger"
+                                           data-confirm="Are you sure you want to delete?"><i
+                                                class="ion ion-ios7-trash"></i> Delete</a>
+
+                                    </td>
+
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+
+                    </c:if>
+                </div>
+            </div>+
+        </div>
+
+        <!-- /.display row -->
+
 
     </div>
     <!-- /.container-fluid -->
@@ -307,7 +405,24 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<!-- Date picker JavaScript -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.1.4.2.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsDatePick.jquery.min.1.3.js"></script>
 
+
+<%
+    }
+    catch(Exception e)
+    {
+        System.out.println("wrong entry"+e);
+    }
+%>
 </body>
 
 </html>
+
+
+
+
+
+

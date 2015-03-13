@@ -1,30 +1,37 @@
 <beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.springframework.org/schema/security"
              xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security.xsd">
 
-       <http auto-config="true">
-              <access-denied-handler error-page="/error"/>
-              <intercept-url pattern="/dairyAdmin**" access="ROLE_CHURCHADMIN"/>
-              <intercept-url pattern="/dairyWorker**" access="ROLE_SCHOOLADMIN"/>
-              <intercept-url pattern="/user**" access="ROLE_USER"/>
-              <form-login login-page='/mainLogin'
-                          username-parameter="staffUsername"
-                          password-parameter="staffPassword"
-                          default-target-url="/default"
-                          authentication-failure-url="/mainLogin?authfailed"/>
-              <logout logout-success-url="/mainLogin?logout"/>
-       </http>
+    <http auto-config="true" use-expressions="true" create-session="always" disable-url-rewriting="true">
+        <access-denied-handler error-page="/error"/>
+        <intercept-url pattern="/dairyAdmin/**" access="hasRole('ROLE_FIRMADMIN')"/>
+        <intercept-url pattern="/dairyWorker/**" access="hasRole('ROLE_FIRMWORKER')"/>
+        <intercept-url pattern="/user/**" access="permitAll"/>
+        <form-login login-page='/mainLogin'
+                    username-parameter="username"
+                    password-parameter="password"
+                    default-target-url="/default"
+                    authentication-failure-url="/mainLogin?authfailed"
+                    login-processing-url="/j_spring_security_check"/>
+        <logout logout-success-url="/mainLogin?logout" invalidate-session="true" delete-cookies="JSESSIONID"/>
+        <session-management invalid-session-url="/mainLogin?sessionExpired" session-fixation-protection="newSession"
+                            session-authentication-error-url="/mainLogin">
+            <concurrency-control max-sessions="1" expired-url="/mainLogin?sessionExpired"
+                                 error-if-maximum-exceeded="true"/>
+        </session-management>
+    </http>
 
-       <authentication-manager>
-              <authentication-provider>
-                     <jdbc-user-service data-source-ref="dataSource"
-                                        users-by-username-query="select staffUsername,staffPassword,staffRetired from Staff where staffUsername =?"
-                                        authorities-by-username-query="select staffUsername,ROLE from userRoles where staffUsername =?"/>
-              </authentication-provider>
-       </authentication-manager>
+    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="select username,password,retired from Staff where username =?"
+                               authorities-by-username-query="select username,ROLE from userRoles where username =?"/>
+        </authentication-provider>
+    </authentication-manager>
 
 </beans:beans>
 

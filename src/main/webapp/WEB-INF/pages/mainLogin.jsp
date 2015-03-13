@@ -18,7 +18,7 @@
 </head>
 <body>
 <c:url value="/j_spring_security_check" var="login"/>
-<form method="post" action="${login}" name="loginForm">>
+<form method="post" action="${login}" name="loginForm">
   <h1>LOGIN</h1>
   <div class="inset">
     <c:if test="${not empty error}">
@@ -29,11 +29,11 @@
     </c:if>
     <p>
       <label >USER NAME</label>
-      <input type="text" name="staffUsername" class="form-control" placeholder="Username" id="staffUsernamee" required/>
+      <input type="text" name="username" class="form-control" placeholder="username" id="username" required/>
     </p>
     <p>
       <label >PASSWORD</label>
-      <input type="password" name="staffPassword" class="form-control" placeholder="Password" id="staffPassword"/>
+      <input type="password" name="password" class="form-control" placeholder="password" id="password"/>
     </p>
 
   </div>

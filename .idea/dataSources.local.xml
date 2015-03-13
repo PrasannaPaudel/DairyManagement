@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - cms@localhost" uuid="ae137987-f44e-49d5-bc19-d4913d2f3ec3">
+    <data-source name="MySQL - dairyfarm@localhost" uuid="a6c26cc7-1ddf-4c8c-b4d9-8b217f7e5d86">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>cms.*</schema-pattern>
-      <default-schemas>cms.*</default-schemas>
+      <schema-pattern>dairyfarm.*</schema-pattern>
+      <default-schemas>dairyfarm.*</default-schemas>
     </data-source>
   </component>
 </project>
