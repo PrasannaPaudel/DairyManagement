@@ -9,13 +9,15 @@ import java.util.List;
  */
 public interface WorkerService {
 
-    public void addWorker(Workers worker);
+	public void addWorker(Workers worker);
 
-    public void updateWorker(Workers worker);
+	public void updateWorker(Workers worker);
 
-    public List<Workers> listWorker();
+	public List<Workers> listWorker();
 
-    public Workers getWorkerById(Integer workerId);
-    public Workers getWorkerByUuid(Integer workerUuid);
-    public void removeWorker(Workers worker);
+	public Workers getWorkerById(Integer workerId);
+
+	public Workers getWorkerByUuid(Integer workerUuid);
+
+	public void removeWorker(Workers worker);
 }

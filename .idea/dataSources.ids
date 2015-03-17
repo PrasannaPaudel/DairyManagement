@@ -25,6 +25,7 @@
       <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="relatedTo" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="Relationship" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Status" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
       <primary-key name="PRIMARY" columns="cowId"/>
       <exported-key name="breedCowIdFK" table="breeding" schema="" catalog="dairyfarm" columns="cowId"/>

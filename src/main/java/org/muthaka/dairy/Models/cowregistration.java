@@ -9,81 +9,86 @@ import java.io.Serializable;
 /**
  * Created by MUTHAKA on 2/24/2015.
  */
-@Entity
-@Table(name = "cowRegistration") public class CowRegistration implements Serializable {
-    @Id @Column(name = "cowId") private int cowId;
-//    @Column(name = "cowUuid") private Integer cowUuid;
-    @Column(name = "breed") private String breed;
-    @Column(name = "gender") private String gender;
-    @Column(name = "dob") private String dob;
-    @Column(name = "relatedTo") private String relatedTo;
-    @Column(name = "relationship") private String relationship;
-    @Column(name = "date") private String date;
+@Entity @Table(name = "cowRegistration") public class CowRegistration implements Serializable {
+	@Id @Column(name = "cowId") private int cowId;
+	//    @Column(name = "cowUuid") private Integer cowUuid;
+	@Column(name = "breed") private String breed;
+	@Column(name = "gender") private String gender;
+	@Column(name = "dob") private String dob;
+	@Column(name = "relatedTo") private String relatedTo;
+	@Column(name = "relationship") private String relationship;
+	@Column(name = "Status") private String status;
+	@Column(name = "date") private String date;
 
-    public int getCowId() {
-        return cowId;
-    }
+	public int getCowId() {
+		return cowId;
+	}
 
-    public void setCowId(int cowId) {
-        this.cowId = cowId;
-    }
-    //    public Integer getCowUuid() {
-//        return cowUuid;
-//    }
-//
-//    public void setCowUuid(Integer cowUuid) {
-//        this.cowUuid = cowUuid;
-//    }
+	public void setCowId(int cowId) {
+		this.cowId = cowId;
+	}
+	//    public Integer getCowUuid() {
+	//        return cowUuid;
+	//    }
+	//
+	//    public void setCowUuid(Integer cowUuid) {
+	//        this.cowUuid = cowUuid;
+	//    }
 
-    public String getBreed() {
-        return breed;
-    }
+	public String getBreed() {
+		return breed;
+	}
 
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    public String getDob() {
-        return dob;
-    }
+	public String getDob() {
+		return dob;
+	}
 
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
 
-    public String getRelatedTo() {
-        return relatedTo;
-    }
+	public String getRelatedTo() {
+		return relatedTo;
+	}
 
-    public void setRelatedTo(String relatedTo) {
-        this.relatedTo = relatedTo;
-    }
+	public void setRelatedTo(String relatedTo) {
+		this.relatedTo = relatedTo;
+	}
 
-    public String getRelationship() {
-        return relationship;
-    }
+	public String getRelationship() {
+		return relationship;
+	}
 
-    public void setRelationship(String relationship) {
-        this.relationship = relationship;
-    }
+	public void setRelationship(String relationship) {
+		this.relationship = relationship;
+	}
 
-    public String getDate() {
-        return date;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
+	public String getDate() {
+		return date;
+	}
 
-
+	public void setDate(String date) {
+		this.date = date;
+	}
 
 }

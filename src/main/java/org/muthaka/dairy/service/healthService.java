@@ -9,13 +9,13 @@ import java.util.List;
  */
 public interface HealthService {
 
-    public void addHealth(Health health);
+	public void addHealth(Health health);
 
-    public void updateHealth(Health health);
+	public void updateHealth(Health health);
 
-    public List<Health> listHealth();
+	public List<Health> listHealth();
 
-    public Health getHealthById(Integer healthId);
+	public Health getHealthById(Integer healthId);
 
-    public void removeHealth(Integer healthId);
+	public void removeHealth(Integer healthId);
 }

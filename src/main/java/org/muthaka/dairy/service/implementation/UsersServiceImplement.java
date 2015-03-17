@@ -11,38 +11,38 @@ import java.util.List;
  * Created by MUTHAKA on 3/6/2015.
  */
 public class UsersServiceImplement implements UsersService {
-    private usersDao usDAO;
+	private usersDao usDAO;
 
-    public void setUsersDao(usersDao usDAO) {this.usDAO = usDAO;
-    }
+	public void setUsersDao(usersDao usDAO) {
+		this.usDAO = usDAO;
+	}
 
-    @Override @Transactional public void addUser(Users user) {
+	@Override @Transactional public void addUser(Users user) {
 
-        this.usDAO.addUser(user);
-    }
+		this.usDAO.addUser(user);
+	}
 
-    @Override @Transactional public void updateUser(Users user) {
+	@Override @Transactional public void updateUser(Users user) {
 
-        this.usDAO.updateUser(user);
-    }
+		this.usDAO.updateUser(user);
+	}
 
+	@Override @Transactional public List<Users> listUser() {
 
-    @Override @Transactional public List<Users> listUser() {
+		return this.usDAO.listUser();
+	}
 
-        return this.usDAO.listUser();
-    }
+	@Override @Transactional public Users getUserById(Integer userId) {
+		return this.usDAO.getUserById(userId);
+	}
 
-    @Override @Transactional public Users getUserById(Integer userId) {
-        return this.usDAO.getUserById(userId);
-    }
-    @Override @Transactional public Users getUserByUuid(String userUuid) {
-        return this.usDAO.getUserByUuid(userUuid);
-    }
+	@Override @Transactional public Users getUserByUuid(String userUuid) {
+		return this.usDAO.getUserByUuid(userUuid);
+	}
 
+	@Override @Transactional public void removeUser(Users user) {
 
-    @Override @Transactional public void removeUser(Users user) {
-
-        this.usDAO.removeUser(user);
-    }
+		this.usDAO.removeUser(user);
+	}
 
 }

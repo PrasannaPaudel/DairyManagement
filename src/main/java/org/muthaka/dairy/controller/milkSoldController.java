@@ -19,61 +19,59 @@ import java.security.Principal;
 /**
  * Created by MUTHAKA on 3/10/2015.
  */
-@Controller
-public class MilkSoldController {
+@Controller public class MilkSoldController {
 
-    private static final Logger logger = Logger.getLogger(MilkSoldController.class);
-    private MilkSoldService milkSoldService;
+	private static final Logger logger = Logger.getLogger(MilkSoldController.class);
+	private MilkSoldService milkSoldService;
 
-    @Autowired(required = true) @Qualifier(value = "milkSoldService")
-    public void setMealService(MilkSoldService milkSoldService1) {
-        this.milkSoldService = milkSoldService1;
-    }
+	@Autowired(required = true) @Qualifier(value = "milkSoldService")
+	public void setMealService(MilkSoldService milkSoldService1) {
+		this.milkSoldService = milkSoldService1;
+	}
 
-    @RequestMapping(value = "/dairyAdmin/viewMilkSold", method = RequestMethod.GET)
-    public ModelAndView listMilkSold(ModelMap modelMap, Principal principal) {
-        String dairyAdminName = principal.getName();
-        modelMap.addAttribute("dairyAdminNm", dairyAdminName);
-        modelMap.addAttribute("milkSold", new MilkSold());
-        modelMap.addAttribute("listMilkSold", this.milkSoldService.listMilkSold());
-        ModelAndView sellModel = new ModelAndView();
-        sellModel.addObject(modelMap);
-        sellModel.addObject("message", "Fetched Milk successfully.");
-        sellModel.setViewName("Admin/viewMilkSold");
-        return sellModel;
-    }
+	@RequestMapping(value = "/dairyAdmin/viewMilkSold", method = RequestMethod.GET)
+	public ModelAndView listMilkSold(ModelMap modelMap, Principal principal) {
+		String dairyAdminName = principal.getName();
+		modelMap.addAttribute("dairyAdminNm", dairyAdminName);
+		modelMap.addAttribute("milkSold", new MilkSold());
+		modelMap.addAttribute("listMilkSold", this.milkSoldService.listMilkSold());
+		ModelAndView sellModel = new ModelAndView();
+		sellModel.addObject(modelMap);
+		sellModel.addObject("message", "Fetched Milk successfully.");
+		sellModel.setViewName("Admin/viewMilkSold");
+		return sellModel;
+	}
 
-    @RequestMapping(value = "/dairyAdmin/milkSold/save", method = RequestMethod.POST)
-    public String addMilkSold(@ModelAttribute("milkSold") MilkSold sell, RedirectAttributes redirectAttributes)
-            throws RuntimeException {
-        try {
-            if (sell.getSellId() == 0) {
-                this.milkSoldService.addMilkSold(sell);
-                redirectAttributes.addFlashAttribute("message", "Saved successfully");
-            } else {
-                this.milkSoldService.updateMilkSold(sell);
-                redirectAttributes.addFlashAttribute("message", "Updated successfully");
-            }
-        } catch (RuntimeException ex) {
-            redirectAttributes.addFlashAttribute("error", "Milk Sold not saved");
-            logger.info("##########################################################################################" + ex);
-        }
+	@RequestMapping(value = "/dairyAdmin/milkSold/save", method = RequestMethod.POST)
+	public String addMilkSold(@ModelAttribute("milkSold") MilkSold sell, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (sell.getSellId() == 0) {
+				this.milkSoldService.addMilkSold(sell);
+				redirectAttributes.addFlashAttribute("message", "Saved successfully");
+			} else {
+				this.milkSoldService.updateMilkSold(sell);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk Sold not saved");
+			logger.info("##########################################################################################" + ex);
+		}
 
-        return "redirect:/dairyAdmin/sellMilk";
-    }
+		return "redirect:/dairyAdmin/sellMilk";
+	}
 
-    @RequestMapping("/dairyAdmin/milkSold/remove/{sellId}")
-    public String removeMilkSold(@PathVariable("sellId") Integer sellId, RedirectAttributes redirectAttributes)
-            throws RuntimeException {
-        try {
-            this.milkSoldService.removeMilkSold(sellId);
-            redirectAttributes.addFlashAttribute("message", "Milk Sold Details was deleted successfully");
-        } catch (RuntimeException ex) {
-            redirectAttributes.addFlashAttribute("error", "Milk Sold Details was not deleted");
-        }
+	@RequestMapping("/dairyAdmin/milkSold/remove/{sellId}")
+	public String removeMilkSold(@PathVariable("sellId") Integer sellId, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			this.milkSoldService.removeMilkSold(sellId);
+			redirectAttributes.addFlashAttribute("message", "Milk Sold Details was deleted successfully");
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk Sold Details was not deleted");
+		}
 
-        return "redirect:/dairyAdmin/viewMilkSold";
-    }
-
+		return "redirect:/dairyAdmin/viewMilkSold";
+	}
 
 }

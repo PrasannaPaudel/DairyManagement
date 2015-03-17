@@ -290,7 +290,7 @@
 
                                     <thead>
                                     <tr>
-                                        <th>Milk-Id</th>
+                                        <th>Cow-Id</th>
                                         <th>Time</th>
                                         <th>Amount-Produced</th>
                                         <th>Date</th>
@@ -302,7 +302,7 @@
                                     <tbody>
                                     <c:forEach items="${listMilkProduced}" var="milkProduced">
                                         <tr>
-                                            <td>${milkProduced.milkId}</td>
+                                            <td>${milkProduced.cowId}</td>
                                             <td>${milkProduced.time}</td>
                                             <td>${milkProduced.amountProduced}</td>
                                             <td>${milkProduced.date}</td>
@@ -327,7 +327,7 @@
                                        cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th>Milk-Id</th>
+                                        <th>Cow-Id</th>
                                         <th>Time</th>
                                         <th>Amount-Produced</th>
                                         <th>Date</th>
@@ -368,7 +368,3 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>

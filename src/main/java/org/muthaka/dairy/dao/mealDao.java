@@ -9,12 +9,13 @@ import java.util.List;
  */
 public interface mealDao {
 
-    public void addFeeds(DairyFeeds dairyfeeds);
+	public void addFeeds(DairyFeeds dairyfeeds);
 
-    public void updateFeeds(DairyFeeds dairyfeeds);
+	public void updateFeeds(DairyFeeds dairyfeeds);
 
-    public List<DairyFeeds> listDairyFeeds();
+	public List<DairyFeeds> listDairyFeeds();
 
-    public DairyFeeds getFeedsById(Integer dairyId);
-    public void removeFeed (Integer dairyId);
+	public DairyFeeds getFeedsById(Integer dairyId);
+
+	public void removeFeed(Integer dairyId);
 }

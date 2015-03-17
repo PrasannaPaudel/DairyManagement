@@ -245,6 +245,9 @@
             <column name="Relationship" type="varchar(45)">
                 <constraints nullable="true"/>
             </column>
+            <column name="Status" type="varchar(100)">
+                <constraints nullable="true"/>
+            </column>
             <column name="date" type="timestamp" defaultValueDate="${now}">
                 <constraints nullable="false"/>
             </column>

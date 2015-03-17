@@ -9,13 +9,15 @@ import java.util.List;
  */
 public interface MilkService {
 
-    public void addMilk(MilkProduction milkproduced);
+	public void addMilk(MilkProduction milkproduced);
 
-    public void updateMilk(MilkProduction milkproduced);
+	public void updateMilk(MilkProduction milkproduced);
 
-    public List<MilkProduction> listMilkProduced();
+	public List<MilkProduction> listMilkProduced();
 
-    public MilkProduction getMilkById(Integer milkId);
-    public MilkProduction getMilkByUuid(Integer milkUuid);
-    public void removeMilk(Integer milkId);
+	public MilkProduction getMilkById(Integer milkId);
+
+	public MilkProduction getMilkByUuid(Integer milkUuid);
+
+	public void removeMilk(Integer milkId);
 }

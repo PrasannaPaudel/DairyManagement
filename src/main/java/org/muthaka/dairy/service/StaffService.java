@@ -9,14 +9,15 @@ import java.util.List;
  */
 public interface StaffService {
 
-    public void addStaff(Staff staff);
+	public void addStaff(Staff staff);
 
-    public void updateStaff(Staff staff);
+	public void updateStaff(Staff staff);
 
-    public List<Staff> listStaff();
+	public List<Staff> listStaff();
 
-    public Staff getStaffById(Integer staffId);
-    public Staff getStaffByUuid(String staffUuid);
+	public Staff getStaffById(Integer staffId);
 
-    public void removeStaff(Staff staff);
+	public Staff getStaffByUuid(String staffUuid);
+
+	public void removeStaff(Staff staff);
 }

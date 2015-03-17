@@ -9,13 +9,13 @@ import java.util.List;
  */
 public interface milkSoldDao {
 
-    public void addMilkSold(MilkSold sell);
+	public void addMilkSold(MilkSold sell);
 
-    public void updateMilkSold(MilkSold sell);
+	public void updateMilkSold(MilkSold sell);
 
-    public List<MilkSold> listMilkSold();
+	public List<MilkSold> listMilkSold();
 
-    public MilkSold getMilkSoldById(Integer sellId);
+	public MilkSold getMilkSoldById(Integer sellId);
 
-    public void removeMilkSold(Integer sellId);
+	public void removeMilkSold(Integer sellId);
 }

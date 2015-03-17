@@ -2,142 +2,175 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81ebc930-7fa7-47f0-be79-817ac513de4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/BreedController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/BreedService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Breeding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/CowRegistration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/CustomerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/CustomerService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Customers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/DairyFeeds.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Health.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/HealthController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/HealthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MealController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MealService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/MealServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkProduction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkSold.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkSoldController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkSoldService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/SellMilkService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/StaffController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/StaffDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/StaffService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/StaffServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Users.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/UsersController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/UsersDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/UsersService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/UsersServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WorkerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/WorkerService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Workers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/WorkersDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/blankForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/breedDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/breedDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/breedServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/customerDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/customerDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/customerServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/healthDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/healthDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/healthServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/mealDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/mealDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkSoldDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkSoldServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerAdminForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/registerCowDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerCustomer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerStaffForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerUserForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerWorkerForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/rtl.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/sellMilkForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/sellMilkServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/sellmilkDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/staffDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/usersDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewCustomer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFinance.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHealth.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkSold.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewWorkers.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/workerServiceImplement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/workersDao.java" />
-      <change type="DELETED" beforePath="D:\Dairy Project\dairyFarm\src\main\webapp\WEB-INF\pages\login.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="DELETED" beforePath="D:\Dairy Project\dairyFarm\target\dairyFarm\WEB-INF\lib\commons-logging-1.1.3.jar" afterPath="" />
       <change type="DELETED" beforePath="D:\Dairy Project\dairyFarm\target\dairyFarm\WEB-INF\lib\hibernate-jpa-2.0-api-1.0.1.Final.jar" afterPath="" />
       <change type="DELETED" beforePath="D:\Dairy Project\dairyFarm\target\dairyFarm\WEB-INF\pages\dairyWorker.jsp" afterPath="" />
       <change type="DELETED" beforePath="D:\Dairy Project\dairyFarm\target\dairyFarm\WEB-INF\pages\login.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/controller/MainController.class" afterPath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/controller/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/controller/MainController.class" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/controller/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/controller/RedirectController.class" afterPath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/controller/RedirectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/controller/RedirectController.class" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/controller/RedirectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/Models/Staff.class" afterPath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/Models/Staff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/Models/Staff.class" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/Models/Staff.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/Models/CowRegistration.class" afterPath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/Models/CowRegistration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/Models/CowRegistration.class" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/Models/CowRegistration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm.war" afterPath="$PROJECT_DIR$/target/dairyFarm.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.class" afterPath="$PROJECT_DIR$/target/classes/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.class" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/500.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/500.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/muthaka/dairy/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/muthaka/dairy/AppTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/BreedController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/BreedController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Breeding.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Breeding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/CustomerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/HealthController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/HealthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/HibernateServletContextListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/HibernateServletContextListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/Log4jContextListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/Log4jContextListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MealController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MealController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkSold.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkSold.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkSoldService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkSoldService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RedirectController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RedirectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Staff.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Staff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.muthaka.dairy.AppTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.muthaka.dairy.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/StaffService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/StaffService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Users.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/UsersController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/UsersDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/UsersDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/UsersService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/UsersService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/UsersServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/UsersServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Generators/UuidGen.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Generators/UuidGen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WebController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WebController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WorkerController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WorkerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/WorkersDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/WorkersDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_spinning.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/blankForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/blankForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-rtl.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-rtl.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-rtl.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/breedDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/breedDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/breedDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/breedDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/breedForm.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/breedForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/breedServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/breedServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/customerDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/customerDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/customerDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/customerDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/customerServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/customerServiceImplement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/dairyAdmin.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/dairyAdmin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dairyFarm.iml" afterPath="$PROJECT_DIR$/dairyFarm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/dairyFarm_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/dairyFarm_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Worker/dairyWorker.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Worker/dairyWorker.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/liquibase/database.properties" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/database.properties" afterPath="$PROJECT_DIR$/target/classes/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/liquibase/database.properties" afterPath="$PROJECT_DIR$/target/classes/liquibase/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/database.properties" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/database.properties" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/excanvas.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/flot-data.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/flot-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/healthDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/healthDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/healthDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/healthDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/healthForm.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/healthForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/healthServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/healthServiceImplement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/liquibase/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/liquibase/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/liquibase/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.1.4.2.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.1.4.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.pie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.resize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.tooltip.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/flot/jquery.flot.tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/jsDatePick.jquery.min.1.3.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jsDatePick.jquery.min.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/jsDatePick_ltr.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/jsDatePick_ltr.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/liquibase/liquibase.xml" afterPath="$PROJECT_DIR$/target/classes/liquibase/liquibase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/liquibase.xml" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/classes/liquibase/liquibase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mainLogin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mainLogin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/mainLogin.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/mainLogin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/mealDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/mealDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/mealDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/mealDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/mealForm.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/mealForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/milkForm.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/milkForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkSoldDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkSoldDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkSoldServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkSoldServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris-data.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/plugins/morris.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/plugins/morris.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/morris.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/path.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/raphael.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/plugins/morris/raphael.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerAdminForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerAdminForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/registerCowDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/registerCowDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerCustomer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerCustomer.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/registerForm.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/registerForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerStaffForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerStaffForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerUserForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerUserForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerWorkerForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerWorkerForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/rtl.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/rtl.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin-rtl.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin-rtl.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/resources/css/sb-admin.css" afterPath="$PROJECT_DIR$/target/dairyFarm/resources/css/sb-admin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/security-config.xml" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/security-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/sellMilkForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/sellMilkForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/spinning.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/usersDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/usersDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewCustomer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewCustomer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewFeeds.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewFeeds.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFinance.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFinance.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHealth.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHealth.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewHerd.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewHerd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewMilkProduction.jsp" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/pages/Admin/viewMilkProduction.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkSold.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkSold.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewWorkers.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewWorkers.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/dairyFarm/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/workerServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/workerServiceImplement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/workersDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/workersDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\webapp\WEB-INF\pages\dairyWorker.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Worker/dairyWorker.jsp" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\cowregistration.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/CowRegistration.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\customers.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Customers.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\dairyFeeds.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/DairyFeeds.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\health.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Health.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\milkProduction.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkProduction.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\Models\workers.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Workers.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\controller\milkSoldController.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkSoldController.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\breedService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/BreedService.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\customerService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/CustomerService.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\healthService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/HealthService.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\implementation\mealServiceImplement.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/MealServiceImplement.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\mealService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MealService.java" />
+      <change type="MOVED" beforePath="D:\Dairy Project\dairyFarm\src\main\java\org\muthaka\dairy\service\workerService.java" afterPath="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/WorkerService.java" />
     </list>
     <ignored path="dairyFarm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -190,6 +223,42 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="milkproduction" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - dairyfarm@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dairyfarm" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dairyfeeds" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - dairyfarm@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dairyfarm" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="cowregistration" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -201,12 +270,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java">
+      <file leaf-file-name="registerCowServiceImplement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="958" max-vertical-offset="5049">
-              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="765">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#493#494#0" expanded="false" />
+                <element signature="e#526#527#0" expanded="false" />
+                <element signature="e#941#942#0" expanded="false" />
+                <element signature="e#987#988#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,27 +289,36 @@
       <file leaf-file-name="registerForm.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-48.346153" vertical-offset="4914" max-vertical-offset="7378">
-              <caret line="363" column="52" selection-start-line="363" selection-start-column="52" selection-end-line="363" selection-end-column="52" />
+            <state vertical-scroll-proportion="-3.8823528" vertical-offset="2573" max-vertical-offset="8398">
+              <caret line="163" column="43" selection-start-line="163" selection-start-column="43" selection-end-line="163" selection-end-column="43" />
               <folding>
-                <marker date="1426227677876" expanded="true" signature="1796:2467" placeholder="..." />
-                <marker date="1426227677876" expanded="true" signature="1830:2455" placeholder="{...}" />
-                <marker date="1426227677876" expanded="true" signature="1857:2445" placeholder="{&quot;useMode&quot;: 2...}" />
-                <marker date="1426227677876" expanded="true" signature="1962:2433" placeholder="/*...*/" />
-                <marker date="1426227677876" expanded="true" signature="2948:2977" placeholder="select * fro..cowregistration..." />
+                <marker date="1426610804074" expanded="true" signature="2275:2373" placeholder="..." />
+                <marker date="1426610804074" expanded="true" signature="2408:2921" placeholder="..." />
+                <marker date="1426610804074" expanded="true" signature="2440:2910" placeholder="{...}" />
+                <marker date="1426610804074" expanded="true" signature="2460:2904" placeholder="{&quot;useMode&quot;: 2...}" />
+                <marker date="1426610804074" expanded="true" signature="2528:2899" placeholder="/*...*/" />
+                <marker date="1426610804074" expanded="true" signature="3438:3483" placeholder="select * fro..cowregistration..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mealForm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.115385" vertical-offset="4291" max-vertical-offset="6324">
-              <caret line="274" column="54" selection-start-line="274" selection-start-column="54" selection-end-line="274" selection-end-column="54" />
-              <folding>
-                <marker date="1426177426231" expanded="true" signature="1904:1933" placeholder="select * fro..cowregistration..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -242,28 +326,18 @@
       <file leaf-file-name="dairyAdmin.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.230769" vertical-offset="6032" max-vertical-offset="10761">
-              <caret line="372" column="51" selection-start-line="372" selection-start-column="51" selection-end-line="372" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6231" max-vertical-offset="11169">
+              <caret line="391" column="67" selection-start-line="391" selection-start-column="29" selection-end-line="391" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersDaoImplement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/UsersDaoImplement.java">
+      <file leaf-file-name="RegisterCowService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1802">
-              <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UuidGen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Generators/UuidGen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30126584" vertical-offset="0" max-vertical-offset="395">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="476">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -272,39 +346,13 @@
       <file leaf-file-name="RegisterCowController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1428">
-              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="1173">
-              <caret line="65" column="49" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerDaoImplement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/customerDaoImplement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/customerDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1411">
+              <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1213#1214#0" expanded="false" />
+                <element signature="e#1257#1258#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -317,9 +365,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/customerServiceImplement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Health.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/HealthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/healthServiceImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/healthDao.java" />
@@ -333,9 +378,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/breedDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/breedDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Breeding.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/Customers.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkSold.java" />
@@ -351,7 +393,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/HealthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/BreedController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MealController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/CustomerController.java" />
@@ -361,13 +402,20 @@
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/UsersDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerUserForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/CowRegistration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -421,35 +469,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="dairyFarm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.springframework:spring-webmvc:4.1.2.RELEASE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-webmvc-4.1.2.RELEASE.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -605,62 +630,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="liquibase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -688,7 +657,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Generators" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,79 +684,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dairy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairyFarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dairy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -805,7 +707,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="preferences.sourceCode.LESS" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -816,6 +718,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="true" />
+    <property name="LayoutCode.rearrangeEntries" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1229,7 +1132,6 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="dairyFarm:war" />
         </option>
@@ -1276,12 +1178,13 @@
       <workItem from="1425631542392" duration="37956000" />
       <workItem from="1425965609957" duration="54173000" />
       <workItem from="1426104624580" duration="235000" />
-      <workItem from="1426145490772" duration="18414000" />
+      <workItem from="1426145490772" duration="54226000" />
+      <workItem from="1426611032620" duration="147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506342000" />
+    <option name="totallyTimeSpent" value="542301000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1307,37 +1210,37 @@
     <frame x="1" y="1" width="1364" height="766" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.88661414" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11811024" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18558282" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984252" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.82204723" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33385828" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33385828" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22009203" sideWeight="0.4992126" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22009203" sideWeight="0.5007874" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18558282" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984252" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.82204723" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1396,7 +1299,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="40" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1405,231 +1308,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkProduction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <caret line="20" column="47" selection-start-line="15" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/registerCowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/MilkSold.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1904">
-          <caret line="112" column="0" selection-start-line="74" selection-start-column="4" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/milkSoldDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/MilkSoldService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/milkSoldServiceImplement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="884">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="935">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.84" vertical-offset="1714" max-vertical-offset="2312">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#1266#1286#0" expanded="false" />
-            <element signature="e#1324#1341#0" expanded="false" />
-            <element signature="e#1384#1402#0" expanded="false" />
-            <element signature="e#1445#1467#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1190">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3e15af3/a6c26cc7-1ddf-4c8c-b4d9-8b217f7e5d86/dairyfarm..customers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3e15af3/a6c26cc7-1ddf-4c8c-b4d9-8b217f7e5d86/dairyfarm..milksold">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/sellMilkForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.076923" vertical-offset="3733" max-vertical-offset="5287">
-          <caret line="235" column="32" selection-start-line="235" selection-start-column="32" selection-end-line="235" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerCustomer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.825704" vertical-offset="618" max-vertical-offset="4879">
-          <caret line="231" column="77" selection-start-line="231" selection-start-column="77" selection-end-line="231" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHealth.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.807693" vertical-offset="4367" max-vertical-offset="6273">
-          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62147886" vertical-offset="4994" max-vertical-offset="6290">
-          <caret line="273" column="57" selection-start-line="273" selection-start-column="57" selection-end-line="273" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/mealDaoImplement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="470" max-vertical-offset="1496">
-          <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57990116" vertical-offset="1093" max-vertical-offset="1700">
-          <caret line="87" column="66" selection-start-line="87" selection-start-column="66" selection-end-line="87" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50176054" vertical-offset="4968" max-vertical-offset="6460">
-          <caret line="309" column="65" selection-start-line="309" selection-start-column="65" selection-end-line="309" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/mealDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19604613" vertical-offset="0" max-vertical-offset="607">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/DairyFeeds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19439869" vertical-offset="18" max-vertical-offset="782">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MealController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0942761" vertical-offset="200" max-vertical-offset="1173">
-          <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewCustomer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.961538" vertical-offset="4618" max-vertical-offset="6154">
-          <caret line="293" column="91" selection-start-line="293" selection-start-column="91" selection-end-line="293" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkSoldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1411">
-          <caret line="64" column="49" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkSold.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.846154" vertical-offset="4629" max-vertical-offset="6222">
-          <caret line="295" column="120" selection-start-line="295" selection-start-column="120" selection-end-line="295" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/WebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/StaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/HealthController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1462">
           <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1637,10 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1411">
           <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding>
-            <element signature="e#1120#1121#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1648,9 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81313133" vertical-offset="299" max-vertical-offset="952">
           <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1663,7 +1338,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1671,7 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2800659" vertical-offset="0" max-vertical-offset="607">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1679,7 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19604613" vertical-offset="0" max-vertical-offset="607">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1687,15 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.25704226" vertical-offset="4107" max-vertical-offset="5746">
           <caret line="233" column="42" selection-start-line="233" selection-start-column="42" selection-end-line="233" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5860" max-vertical-offset="8228">
-          <caret line="375" column="21" selection-start-line="375" selection-start-column="21" selection-end-line="375" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1703,93 +1366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
           <caret line="1" column="50" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.884615" vertical-offset="4651" max-vertical-offset="5355">
-          <caret line="304" column="2" selection-start-line="304" selection-start-column="2" selection-end-line="304" selection-end-column="2" />
-          <folding>
-            <marker date="1426176933884" expanded="true" signature="-1:-1" placeholder="select * fro..cowregistration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.884615" vertical-offset="4804" max-vertical-offset="5508">
-          <caret line="313" column="2" selection-start-line="313" selection-start-column="2" selection-end-line="313" selection-end-column="2" />
-          <folding>
-            <marker date="1426177426328" expanded="true" signature="-1:-1" placeholder="select * fro..cowregistration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.846153" vertical-offset="4529" max-vertical-offset="5848">
-          <caret line="335" column="7" selection-start-line="335" selection-start-column="7" selection-end-line="335" selection-end-column="7" />
-          <folding>
-            <marker date="1426177426112" expanded="true" signature="-1:-1" placeholder="select * fro..cowregistration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.23077" vertical-offset="4914" max-vertical-offset="6562">
-          <caret line="320" column="49" selection-start-line="320" selection-start-column="49" selection-end-line="320" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="958" max-vertical-offset="5049">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.230769" vertical-offset="6032" max-vertical-offset="10761">
-          <caret line="372" column="51" selection-start-line="372" selection-start-column="51" selection-end-line="372" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-48.346153" vertical-offset="4914" max-vertical-offset="7378">
-          <caret line="363" column="52" selection-start-line="363" selection-start-column="52" selection-end-line="363" selection-end-column="52" />
-          <folding>
-            <marker date="1426227677876" expanded="true" signature="1796:2467" placeholder="..." />
-            <marker date="1426227677876" expanded="true" signature="1830:2455" placeholder="{...}" />
-            <marker date="1426227677876" expanded="true" signature="1857:2445" placeholder="{&quot;useMode&quot;: 2...}" />
-            <marker date="1426227677876" expanded="true" signature="1962:2433" placeholder="/*...*/" />
-            <marker date="1426227677876" expanded="true" signature="2948:2977" placeholder="select * fro..cowregistration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.115385" vertical-offset="4291" max-vertical-offset="6324">
-          <caret line="274" column="54" selection-start-line="274" selection-start-column="54" selection-end-line="274" selection-end-column="54" />
-          <folding>
-            <marker date="1426177426231" expanded="true" signature="1904:1933" placeholder="select * fro..cowregistration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1428">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1797,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="1173">
           <caret line="65" column="49" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1805,7 +1380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1813,7 +1387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,14 +1394,310 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1802">
           <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Generators/UuidGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30126584" vertical-offset="0" max-vertical-offset="395">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewCustomer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.961538" vertical-offset="4618" max-vertical-offset="6154">
+          <caret line="293" column="91" selection-start-line="293" selection-start-column="91" selection-end-line="293" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFinance.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="168.61539" vertical-offset="4384" max-vertical-offset="5695">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewWorkers.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.269231" vertical-offset="111" max-vertical-offset="5559">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/StaffDaoImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkDaoImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1768">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3e15af3/a6c26cc7-1ddf-4c8c-b4d9-8b217f7e5d86/dairyfarm..cowregistration">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/breedForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.615385" vertical-offset="727" max-vertical-offset="5355">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/healthForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.307693" vertical-offset="598" max-vertical-offset="5508">
+          <caret line="54" column="88" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/mealForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.192307" vertical-offset="549" max-vertical-offset="6324">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/milkForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.923077" vertical-offset="721" max-vertical-offset="5950">
+          <caret line="53" column="88" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkSold.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.76923" vertical-offset="4449" max-vertical-offset="6222">
+          <caret line="295" column="120" selection-start-line="295" selection-start-column="120" selection-end-line="295" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHealth.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-37.76923" vertical-offset="4628" max-vertical-offset="6273">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewFeeds.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.576923" vertical-offset="5179" max-vertical-offset="6460">
+          <caret line="330" column="47" selection-start-line="330" selection-start-column="47" selection-end-line="330" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewHerd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-42.5" vertical-offset="0" max-vertical-offset="6919">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/milkSoldDaoImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="667" max-vertical-offset="1598">
+          <caret line="87" column="66" selection-start-line="87" selection-start-column="66" selection-end-line="87" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewBreeding.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.769231" vertical-offset="4869" max-vertical-offset="6290">
+          <caret line="273" column="57" selection-start-line="273" selection-start-column="57" selection-end-line="273" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/viewMilkProduction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-188.11539" vertical-offset="753" max-vertical-offset="6392">
+          <caret line="332" column="53" selection-start-line="332" selection-start-column="53" selection-end-line="332" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/healthDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MilkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1190">
+          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/implementation/registerCowDaoImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="1921">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/dao/registerCowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Models/CowRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1156">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/RegisterCowService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9173989" vertical-offset="522" max-vertical-offset="2312">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23550087" vertical-offset="104" max-vertical-offset="816">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/Log4jContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19604613" vertical-offset="0" max-vertical-offset="607">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/Listener/HibernateServletContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2003367" vertical-offset="0" max-vertical-offset="594">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/liquibase/liquibase.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/liquibase/liquibase.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.828283" vertical-offset="143" max-vertical-offset="8279">
+          <caret line="247" column="51" selection-start-line="247" selection-start-column="51" selection-end-line="247" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56397307" vertical-offset="821" max-vertical-offset="5049">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/service/implementation/registerCowServiceImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#526#527#0" expanded="false" />
+            <element signature="e#941#942#0" expanded="false" />
+            <element signature="e#987#988#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/muthaka/dairy/controller/RegisterCowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1700">
+          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1213#1214#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/dairyAdmin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6231" max-vertical-offset="11169">
+          <caret line="391" column="67" selection-start-line="391" selection-start-column="29" selection-end-line="391" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/modal/jquery.leanModal.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Admin/registerForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8823528" vertical-offset="2573" max-vertical-offset="8398">
+          <caret line="163" column="43" selection-start-line="163" selection-start-column="43" selection-end-line="163" selection-end-column="43" />
+          <folding>
+            <marker date="1426610804074" expanded="true" signature="2275:2373" placeholder="..." />
+            <marker date="1426610804074" expanded="true" signature="2408:2921" placeholder="..." />
+            <marker date="1426610804074" expanded="true" signature="2440:2910" placeholder="{...}" />
+            <marker date="1426610804074" expanded="true" signature="2460:2904" placeholder="{&quot;useMode&quot;: 2...}" />
+            <marker date="1426610804074" expanded="true" signature="2528:2899" placeholder="/*...*/" />
+            <marker date="1426610804074" expanded="true" signature="3438:3483" placeholder="select * fro..cowregistration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

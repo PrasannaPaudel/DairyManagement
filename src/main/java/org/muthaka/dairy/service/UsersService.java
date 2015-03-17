@@ -9,14 +9,15 @@ import java.util.List;
  */
 public interface UsersService {
 
-    public void addUser(Users user);
+	public void addUser(Users user);
 
-    public void updateUser(Users user);
+	public void updateUser(Users user);
 
-    public List<Users> listUser();
+	public List<Users> listUser();
 
-    public Users getUserById(Integer userId);
-    public Users getUserByUuid(String userUuid);
+	public Users getUserById(Integer userId);
 
-    public void removeUser(Users user);
+	public Users getUserByUuid(String userUuid);
+
+	public void removeUser(Users user);
 }

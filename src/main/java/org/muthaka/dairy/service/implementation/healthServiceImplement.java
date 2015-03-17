@@ -12,33 +12,30 @@ import java.util.List;
  */
 public class healthServiceImplement implements HealthService {
 
-    private healthDao healthDAO;
+	private healthDao healthDAO;
 
-    public void setHealthDao(healthDao healthDAO) {
-        this.healthDAO = healthDAO;
-    }
+	public void setHealthDao(healthDao healthDAO) {
+		this.healthDAO = healthDAO;
+	}
 
+	@Override @Transactional public void addHealth(Health health) {
+		this.healthDAO.addHealth(health);
+	}
 
-    @Override @Transactional public void addHealth(Health health) {
-        this.healthDAO.addHealth(health);
-    }
+	@Override @Transactional public void updateHealth(Health health) {
+		this.healthDAO.updateHealth(health);
+	}
 
-    @Override @Transactional public void updateHealth (Health health) {
-        this.healthDAO.updateHealth(health);
-    }
+	@Override @Transactional public List<Health> listHealth() {
+		return this.healthDAO.listHealth();
+	}
 
-    @Override @Transactional public List<Health> listHealth() {
-        return this.healthDAO.listHealth();
-    }
+	@Override @Transactional public Health getHealthById(Integer healthId) {
+		return this.healthDAO.getHealthById(healthId);
+	}
 
-    @Override @Transactional
-    public Health getHealthById(Integer healthId) {
-        return this.healthDAO.getHealthById(healthId);
-    }
+	@Override @Transactional public void removeHealth(Integer healthId) {
 
-
-    @Override @Transactional public void removeHealth(Integer healthId) {
-
-        this.healthDAO.removeHealth(healthId);
-    }
+		this.healthDAO.removeHealth(healthId);
+	}
 }

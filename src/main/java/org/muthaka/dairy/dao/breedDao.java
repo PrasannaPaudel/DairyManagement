@@ -9,14 +9,13 @@ import java.util.List;
  */
 public interface breedDao {
 
-    public void addBreed(Breeding breed);
+	public void addBreed(Breeding breed);
 
-    public void updateBreed(Breeding breed);
+	public void updateBreed(Breeding breed);
 
-    public List<Breeding> listBreed();
+	public List<Breeding> listBreed();
 
-    public Breeding getBreedById(Integer breedId);
+	public Breeding getBreedById(Integer breedId);
 
-
-    public void removeBreed (Integer breedId);
+	public void removeBreed(Integer breedId);
 }

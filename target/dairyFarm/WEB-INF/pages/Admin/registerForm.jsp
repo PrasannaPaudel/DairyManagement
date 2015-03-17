@@ -25,6 +25,12 @@
 
   <title>Cow-Registration </title>
 
+    <!-- modal CSS -->
+    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+    <link rel="icon" href="http://designshack.net/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <link type='text/css' href="${pageContext.request.contextPath}/resources/css/modal/style.css" rel="stylesheet" media="screen" />
+
     <!-- date picker CSS -->
     <link rel="stylesheet" type="text/css" media="all" href="${pageContext.request.contextPath}/resources/css/jsDatePick_ltr.min.css" />
 
@@ -42,6 +48,9 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/modal/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/resources/js/modal/jquery.leanModal.min.js"></script>
 
 
 
@@ -66,8 +75,20 @@
       };
   </script>
 
+<!-- modal JavaScript -->
+    <script type="text/javascript">
+        $(function(){
+            $('#loginform').submit(function(e){
+                return false;
+            });
+
+            $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+        });
+    </script>
+
   <![endif]-->
     <c:url var="addAction" value="/dairyAdmin/registerCows/save"/>
+    <c:url var="updateAction" value="/dairyAdmin/registerCows/save"/>
     <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
     <c:url var="logout" value="/j_spring_security_logout"/>
 
@@ -80,13 +101,15 @@
     try{
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairyFarm?user=root&password=root");
         Statement statement = connection.createStatement() ;
-        resultset =statement.executeQuery("select * from cowregistration") ;
+        resultset =statement.executeQuery("select * from cowregistration WHERE Status=''") ;
 %>
 
 
 <div id="wrapper">
 
-  <!-- Navigation -->
+
+
+    <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -249,7 +272,35 @@
 
     <div class="container-fluid">
 
-      <!-- Page Heading -->
+
+        <!-- Modal -->
+        <%--<div id="w">--%>
+            <%--<div id="content">--%>
+                <%--<h1>Reason To Remove The Cow From The Herd </h1>--%>
+                <%--<p>Just system.</p>--%>
+                <%--<center><a href="#loginmodal" class="flatbtn" id="modaltrigger">Cow Status</a></center>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <div id="loginmodal" style="display:none;">
+            <h1>User Login</h1>
+            <form id="loginform" name="loginform" method="post" action="${updateAction}" commandName="cowRegistration">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+
+                <label >Password:</label>
+                <input type="text" name="status" id="statusupdate" class="txtfield" tabindex="2">
+
+                <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
@@ -296,6 +347,10 @@
                 <label>Date of Birth</label>
                 <input class="form-control" type="date" name="dob" id="dob">
             </div>
+            <div class="form-group">
+                <label>Status</label>
+                <input class="form-control" name="status" id="status">
+            </div>
 
         </div>
 
@@ -340,7 +395,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="panel panel-default">
+                <div class="panel panel-default" id="w">
                     <div class="panel-heading">
                         <h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>
                     </div>
@@ -371,11 +426,12 @@
                                     <td>${dairyCows.relationship}</td>
                                     <td>${dairyCows.date}</td>
                                     <td width="40px">
-                                        <a href="<c:url value="/dairyAdmin/registerCows/remove/${dairyCows.cowId}"/>"
-                                           class="btn btn-sm btn-danger"
-                                           data-confirm="Are you sure you want to delete?"><i
-                                                class="ion ion-ios7-trash"></i> Delete</a>
+                                        <%--<a href="<c:url value="/dairyAdmin/registerCows/remove/${dairyCows.cowId}"/>"--%>
+                                           <%--class="btn btn-sm btn-danger"--%>
+                                           <%--data-confirm="Are you sure you want to delete?"><i--%>
+                                                <%--class="ion ion-ios7-trash"></i> Delete</a>--%>
 
+                                            <a href="#loginmodal" class="btn btn-sm btn-danger" id="modaltrigger">load</a>
                                     </td>
 
                                 </tr>
@@ -401,15 +457,11 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+<%--<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>--%>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <!-- Date picker JavaScript -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.1.4.2.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsDatePick.jquery.min.1.3.js"></script>
-
-
 <%
     }
     catch(Exception e)

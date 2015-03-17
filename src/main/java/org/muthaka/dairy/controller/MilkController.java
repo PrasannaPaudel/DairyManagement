@@ -1,6 +1,5 @@
 package org.muthaka.dairy.controller;
 
-
 import org.apache.log4j.Logger;
 import org.muthaka.dairy.Models.MilkProduction;
 import org.muthaka.dairy.service.MilkService;
@@ -17,64 +16,61 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.security.Principal;
 
-
 /**
  * Created by MUTHAKA on 2/24/2015.
  */
-@Controller
-public class MilkController {
+@Controller public class MilkController {
 
-    private static final Logger logger = Logger.getLogger(MilkController.class);
-    private MilkService milkService;
+	private static final Logger logger = Logger.getLogger(MilkController.class);
+	private MilkService milkService;
 
-    @Autowired(required = true) @Qualifier(value = "milkService")
-    public void setMealService(MilkService milkService1) {
-        this.milkService = milkService1;
-    }
+	@Autowired(required = true) @Qualifier(value = "milkService") public void setMealService(MilkService milkService1) {
+		this.milkService = milkService1;
+	}
 
-    @RequestMapping(value = "/dairyAdmin/viewMilkProduction", method = RequestMethod.GET)
-    public ModelAndView listMilkProduced(ModelMap modelMap, Principal principal) {
-        String dairyAdminName = principal.getName();
-        modelMap.addAttribute("dairyAdminNm", dairyAdminName);
-        modelMap.addAttribute("milkProduced", new MilkProduction());
-        modelMap.addAttribute("listMilkProduced", this.milkService.listMilkProduced());
-        ModelAndView milkModel = new ModelAndView();
-        milkModel.addObject(modelMap);
-        milkModel.addObject("message", "Fetched Milk successfully.");
-        milkModel.setViewName("Admin/viewMilkProduction");
-        return milkModel;
-    }
+	@RequestMapping(value = "/dairyAdmin/viewMilkProduction", method = RequestMethod.GET)
+	public ModelAndView listMilkProduced(ModelMap modelMap, Principal principal) {
+		String dairyAdminName = principal.getName();
+		modelMap.addAttribute("dairyAdminNm", dairyAdminName);
+		modelMap.addAttribute("milkProduced", new MilkProduction());
+		modelMap.addAttribute("listMilkProduced", this.milkService.listMilkProduced());
+		ModelAndView milkModel = new ModelAndView();
+		milkModel.addObject(modelMap);
+		milkModel.addObject("message", "Fetched Milk successfully.");
+		milkModel.setViewName("Admin/viewMilkProduction");
+		return milkModel;
+	}
 
-    @RequestMapping(value = "/dairyAdmin/milkProduced/save", method = RequestMethod.POST)
-    public String addMilk(@ModelAttribute("milkProduction") MilkProduction milk, RedirectAttributes redirectAttributes)
-            throws RuntimeException {
-        try {
-            if (milk.getMilkId() == 0) {
-                this.milkService.addMilk(milk);
-                redirectAttributes.addFlashAttribute("message", "Saved successfully");
-            } else {
-                this.milkService.updateMilk(milk);
-                redirectAttributes.addFlashAttribute("message", "Updated successfully");
-            }
-        } catch (RuntimeException ex) {
-            redirectAttributes.addFlashAttribute("error", "Milk not saved");
-            logger.info("##########################################################################################" + ex);
-        }
+	@RequestMapping(value = "/dairyAdmin/milkProduced/save", method = RequestMethod.POST)
+	public String addMilk(@ModelAttribute("milkProduction") MilkProduction milk, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (milk.getMilkId() == 0) {
+				this.milkService.addMilk(milk);
+				redirectAttributes.addFlashAttribute("message", "Saved successfully");
+			} else {
+				this.milkService.updateMilk(milk);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk not saved");
+			logger.info("##########################################################################################" + ex);
+		}
 
-        return "redirect:/dairyAdmin/milkProduced";
-    }
+		return "redirect:/dairyAdmin/milkProduced";
+	}
 
-    @RequestMapping("/dairyAdmin/milkProduced/remove/{MilkId}")
-    public String removeMilk(@PathVariable("MilkId") Integer milkId, RedirectAttributes redirectAttributes)
-            throws RuntimeException {
-        try {
-            this.milkService.removeMilk(milkId);
-            redirectAttributes.addFlashAttribute("message", "Milk Details was deleted successfully");
-        } catch (RuntimeException ex) {
-            redirectAttributes.addFlashAttribute("error", "Milk Details was not deleted");
-        }
+	@RequestMapping("/dairyAdmin/milkProduced/remove/{MilkId}")
+	public String removeMilk(@PathVariable("MilkId") Integer milkId, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			this.milkService.removeMilk(milkId);
+			redirectAttributes.addFlashAttribute("message", "Milk Details was deleted successfully");
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk Details was not deleted");
+		}
 
-        return "redirect:/dairyAdmin/viewMilkProduction";
-    }
+		return "redirect:/dairyAdmin/viewMilkProduction";
+	}
 
 }

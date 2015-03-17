@@ -9,75 +9,69 @@ import java.io.Serializable;
 /**
  * Created by MUTHAKA on 2/24/2015.
  */
-@Entity
-@Table(name = "healthRecords") public class Health implements Serializable {
-    @Id @Column(name = "healthId") private int healthId;
-    @Column(name = "cowId") private int cowId;
-    @Column(name = "diseaseType") private String diseaseType;
-    @Column(name = "symptoms") private String symptoms;
-    @Column(name = "medicine") private String medicine;
-    @Column(name = "treatmentCost") private String treatmentCost;
-    @Column(name = "date") private String date;
+@Entity @Table(name = "healthRecords") public class Health implements Serializable {
+	@Id @Column(name = "healthId") private int healthId;
+	@Column(name = "cowId") private int cowId;
+	@Column(name = "diseaseType") private String diseaseType;
+	@Column(name = "symptoms") private String symptoms;
+	@Column(name = "medicine") private String medicine;
+	@Column(name = "treatmentCost") private String treatmentCost;
+	@Column(name = "date") private String date;
 
+	public int getHealthId() {
+		return healthId;
+	}
 
+	public void setHealthId(int healthId) {
+		this.healthId = healthId;
+	}
 
+	public int getCowId() {
+		return cowId;
+	}
 
+	public void setCowId(int cowId) {
+		this.cowId = cowId;
+	}
 
-    public int getHealthId() {
-        return healthId;
-    }
+	public String getDiseaseType() {
+		return diseaseType;
+	}
 
-    public void setHealthId(int healthId) {
-        this.healthId = healthId;
-    }
+	public void setDiseaseType(String diseaseType) {
+		this.diseaseType = diseaseType;
+	}
 
-    public int getCowId() {
-        return cowId;
-    }
+	public String getSymptoms() {
+		return symptoms;
+	}
 
-    public void setCowId(int cowId) {
-        this.cowId = cowId;
-    }
+	public void setSymptoms(String symptoms) {
+		this.symptoms = symptoms;
+	}
 
-    public String getDiseaseType() {
-        return diseaseType;
-    }
+	public String getMedicine() {
+		return medicine;
+	}
 
-    public void setDiseaseType(String diseaseType) {
-        this.diseaseType = diseaseType;
-    }
+	public void setMedicine(String medicine) {
+		this.medicine = medicine;
+	}
 
-    public String getSymptoms() {
-        return symptoms;
-    }
+	public String getTreatmentCost() {
+		return treatmentCost;
+	}
 
-    public void setSymptoms(String symptoms) {
-        this.symptoms = symptoms;
-    }
+	public void setTreatmentCost(String treatmentCost) {
+		this.treatmentCost = treatmentCost;
+	}
 
-    public String getMedicine() {
-        return medicine;
-    }
+	public String getDate() {
+		return date;
+	}
 
-    public void setMedicine(String medicine) {
-        this.medicine = medicine;
-    }
-
-    public String getTreatmentCost() {
-        return treatmentCost;
-    }
-
-    public void setTreatmentCost(String treatmentCost) {
-        this.treatmentCost = treatmentCost;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
+	public void setDate(String date) {
+		this.date = date;
+	}
 
 }

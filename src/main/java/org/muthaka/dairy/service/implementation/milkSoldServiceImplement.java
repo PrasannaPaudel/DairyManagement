@@ -12,35 +12,34 @@ import java.util.List;
  */
 public class milkSoldServiceImplement implements MilkSoldService {
 
-    private milkSoldDao soldDAO;
-    public void setSoldDAO(milkSoldDao soldDAO) {this.soldDAO = soldDAO;
-    }
+	private milkSoldDao soldDAO;
 
-    @Override @Transactional public void addMilkSold(MilkSold sell) {
+	public void setSoldDAO(milkSoldDao soldDAO) {
+		this.soldDAO = soldDAO;
+	}
 
-        this.soldDAO.addMilkSold(sell);
-    }
+	@Override @Transactional public void addMilkSold(MilkSold sell) {
 
-    @Override @Transactional public void updateMilkSold(MilkSold sell) {
+		this.soldDAO.addMilkSold(sell);
+	}
 
-        this.soldDAO.updateMilkSold(sell);
-    }
+	@Override @Transactional public void updateMilkSold(MilkSold sell) {
 
+		this.soldDAO.updateMilkSold(sell);
+	}
 
-    @Override @Transactional public List<MilkSold> listMilkSold() {
+	@Override @Transactional public List<MilkSold> listMilkSold() {
 
-        return this.soldDAO.listMilkSold();
-    }
+		return this.soldDAO.listMilkSold();
+	}
 
-    @Override @Transactional public MilkSold getMilkSoldById(Integer sellId) {
-        return this.soldDAO.getMilkSoldById(sellId);
-    }
+	@Override @Transactional public MilkSold getMilkSoldById(Integer sellId) {
+		return this.soldDAO.getMilkSoldById(sellId);
+	}
 
+	@Override @Transactional public void removeMilkSold(Integer sellId) {
 
-    @Override @Transactional public void removeMilkSold(Integer sellId) {
-
-        this.soldDAO.removeMilkSold(sellId);
-    }
-
+		this.soldDAO.removeMilkSold(sellId);
+	}
 
 }

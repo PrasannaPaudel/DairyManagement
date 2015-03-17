@@ -52,7 +52,7 @@
     try{
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairyFarm?user=root&password=root");
         Statement statement = connection.createStatement() ;
-        resultset =statement.executeQuery("select * from cowregistration") ;
+        resultset =statement.executeQuery("select * from cowregistration WHERE Status=''") ;
 %>
 <div id="wrapper">
 

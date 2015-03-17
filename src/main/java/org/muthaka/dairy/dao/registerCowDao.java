@@ -9,13 +9,15 @@ import java.util.List;
  */
 public interface registerCowDao {
 
-    public void addCow(CowRegistration cowReg);
+	public void addCow(CowRegistration cowReg);
 
-    public void updateCow (CowRegistration cowReg);
+	public void updateCow(CowRegistration cowReg);
 
-    public List<CowRegistration> listCowReg();
+	public List<CowRegistration> listCowReg();
 
-    public CowRegistration getCowById(Integer cowId);
-    public CowRegistration getCowByUuid(Integer cowUuid);
-    public void removeCow (Integer cowId);
+	public CowRegistration getCowById(Integer cowId);
+
+	public CowRegistration getCowByUuid(Integer cowUuid);
+
+	public void removeCow(Integer cowId);
 }

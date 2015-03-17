@@ -9,13 +9,14 @@ import java.util.List;
  */
 public interface CustomerService {
 
-    public void addCustomer(Customers customer);
+	public void addCustomer(Customers customer);
 
-    public void updateCustomer(Customers customer);
+	public void updateCustomer(Customers customer);
 
-    public List<Customers> listCustomer();
+	public List<Customers> listCustomer();
 
-    public Customers getCustomerById(Integer customerId);
-    public void removeCustomer(Integer customerId);
+	public Customers getCustomerById(Integer customerId);
+
+	public void removeCustomer(Integer customerId);
 
 }

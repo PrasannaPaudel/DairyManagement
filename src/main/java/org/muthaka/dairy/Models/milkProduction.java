@@ -9,66 +9,61 @@ import java.io.Serializable;
 /**
  * Created by MUTHAKA on 2/24/2015.
  */
-@Entity
-@Table(name = "milkProduction") public class MilkProduction implements Serializable{
+@Entity @Table(name = "milkProduction") public class MilkProduction implements Serializable {
 
+	@Id @Column(name = "milkId") private int milkId;
+	//    @Column(name = "milkProductionUuid") private String milkProductionUuid;
+	@Column(name = "cowId") private int cowId;
+	@Column(name = "time") private String time;
+	@Column(name = "amountProduced") private String amountProduced;
+	@Column(name = "date") private String date;
 
-    @Id @Column(name = "milkId") private int milkId;
-//    @Column(name = "milkProductionUuid") private String milkProductionUuid;
-    @Column(name = "cowId") private int cowId;
-    @Column(name = "time") private String time;
-    @Column(name = "amountProduced") private String amountProduced;
-    @Column(name = "date") private String date;
+	public int getMilkId() {
+		return milkId;
+	}
 
-    public int getMilkId() {
-        return milkId;
-    }
+	public void setMilkId(int milkId) {
+		this.milkId = milkId;
+	}
 
-    public void setMilkId(int milkId) {
-        this.milkId = milkId;
-    }
+	public String getDate() {
+		return date;
+	}
 
-    public String getDate() {
-        return date;
-    }
+	public void setDate(String date) {
+		this.date = date;
+	}
 
-    public void setDate(String date) {
-        this.date = date;
-    }
+	//    public String getBreedUuid() {
+	//        return milkProductionUuid;
+	//    }
+	//
+	//    public void setBreedUuid(String breedUuid) {
+	//        this.milkProductionUuid = breedUuid;
+	//    }
 
-//    public String getBreedUuid() {
-//        return milkProductionUuid;
-//    }
-//
-//    public void setBreedUuid(String breedUuid) {
-//        this.milkProductionUuid = breedUuid;
-//    }
+	public int getCowId() {
+		return cowId;
+	}
 
+	public void setCowId(int cowId) {
+		this.cowId = cowId;
+	}
 
-    public int getCowId() {
-        return cowId;
-    }
+	public String getTime() {
+		return time;
+	}
 
-    public void setCowId(int cowId) {
-        this.cowId = cowId;
-    }
+	public void setTime(String time) {
+		this.time = time;
+	}
 
-    public String getTime() {
-        return time;
-    }
+	public String getAmountProduced() {
+		return amountProduced;
+	}
 
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getAmountProduced() {
-        return amountProduced;
-    }
-
-    public void setAmountProduced(String amountProduced) {
-        this.amountProduced = amountProduced;
-    }
-
-
+	public void setAmountProduced(String amountProduced) {
+		this.amountProduced = amountProduced;
+	}
 
 }

@@ -292,7 +292,7 @@
 
                                     <thead>
                                     <tr>
-                                        <th>Feed-Id</th>
+                                        <th>Cow-Id</th>
                                         <th>Meal-Type</th>
                                         <th>Quantity</th>
                                         <th>Date</th>
@@ -304,7 +304,7 @@
                                     <tbody>
                                     <c:forEach items="${listDairyFeeds}" var="dairyFeeds">
                                         <tr>
-                                            <td>${dairyFeeds.dairyId}</td>
+                                            <td>${dairyFeeds.cowId}</td>
                                             <td>${dairyFeeds.mealType}</td>
                                             <td>${dairyFeeds.quantity}</td>
                                             <td>${dairyFeeds.date}</td>
@@ -328,7 +328,7 @@
                                        cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th>Feed-Id</th>
+                                        <th>Cow-Id</th>
                                         <th>Meal-Type</th>
                                         <th>Quantity</th>
                                         <th>Date</th>

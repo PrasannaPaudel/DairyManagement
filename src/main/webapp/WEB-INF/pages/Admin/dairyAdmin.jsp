@@ -11,32 +11,33 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>Dairy-Farm-Management</title>
+	<title>Dairy-Farm-Management</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Core CSS -->
+	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="${pageContext.request.contextPath}/resources/css/plugins/morris.css" rel="stylesheet">
+	<!-- Morris Charts CSS -->
+	<link href="${pageContext.request.contextPath}/resources/css/plugins/morris.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Custom Fonts -->
+	<link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	      type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
@@ -45,568 +46,591 @@
 <c:url var="logout" value="/j_spring_security_logout"/>
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
-        </div>
-        <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu message-dropdown">
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
+		</div>
+		<!-- Top Menu Items -->
+		<ul class="nav navbar-right top-nav">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu message-dropdown">
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+
+								<div class="media-body">
+									<h5 class="media-heading"><strong>${dairyAdminNm} </strong>
+									</h5>
+
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+
+									<p></p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><strong>${dairyAdminNm} </strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+
+								<div class="media-body">
+									<h5 class="media-heading"><strong>${dairyAdminNm} </strong>
+									</h5>
+
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+
+									<p></p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><strong>Firm-Admin</strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-footer">
-                        <a href="#">Read All New Messages</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu alert-dropdown">
-                    <li>
-                        <a href="#">Transactions <span class="label label-default">Alert customers</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Co-worker <span class="label label-primary">Alert Farm Assistant</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Daily-OnGoing <span class="label label-success">Alert Workers</span></a>
-                    </li>
 
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">View All</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${dairyAdminNm} <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="${logout}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li class="active">
-                    <a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/viewHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health Information</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
-                </li>
-                <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                    <ul id="demo" class="collapse">
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/userRegistration">Register A user</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/staffRegistration">Register A Staff</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/customerRegistration">Register a Customer</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/viewCustomer">View Customer</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                </li>
-                <li>
-                    <a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
+								<div class="media-body">
+									<h5 class="media-heading"><strong>Firm-Admin</strong>
+									</h5>
 
-    <div id="page-wrapper">
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
 
-        <div class="container-fluid">
+									<p></p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-footer">
+						<a href="#">Read All New Messages</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu alert-dropdown">
+					<li>
+						<a href="#">Transactions <span class="label label-default">Alert customers</span></a>
+					</li>
+					<li>
+						<a href="#">Co-worker <span class="label label-primary">Alert Farm Assistant</span></a>
+					</li>
+					<li>
+						<a href="#">Daily-OnGoing <span class="label label-success">Alert Workers</span></a>
+					</li>
 
-            <!-- Page Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">
-                        Dairy-Farm-Management-System <small>Statistics Overview</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li class="active">
-                            <i class="fa fa-dashboard"></i> Dashboard
-                        </li>
-                    </ol>
-                </div>
-            </div>
-            <!-- /.row -->
+					<li class="divider"></li>
+					<li>
+						<a href="#">View All</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>${dairyAdminNm} <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="${logout}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li class="active">
+					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/viewHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health
+						Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
+				</li>
+				<li>
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>
+						Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+					<ul id="demo" class="collapse">
+						<li>
+							<a href="${contextPath}/dairyAdmin/userRegistration">Register A user</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/staffRegistration">Register A Staff</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/customerRegistration">Register a Customer</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/viewCustomer">View Customer</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+				</li>
+				<li>
+					<a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
 
-            <!--
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="alert alert-info alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Dairy Management</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Dairy Management</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
+	<div id="page-wrapper">
 
+		<div class="container-fluid">
 
-            <div class="row" >
-                <div class="col-lg-3 col-md-6" >
-                    <a href="${contextPath}/dairyAdmin/viewHealth">
-                    <div class="panel panel-hh">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">1</div>
-                                    <div>Health Information</div>
-                                </div>
-                            </div>
-                        </div>
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">
+						Dairy-Farm-Management-System
+						<small>Statistics Overview</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li class="active">
+							<i class="fa fa-dashboard"></i> Dashboard
+						</li>
+					</ol>
+				</div>
+			</div>
+			<!-- /.row -->
 
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewMilkProduction">
-                    <div class="panel panel-yellow" >
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">2</div>
-                                    <div>Milk Production</div>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="panel-footer">
-                                <span class="pull-left">View Milk Production</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewBreeding">
-                    <div class="panel panel-tt">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">3</div>
-                                    <div>Breeding Information</div>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewMilkSold">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">4</div>
-                                    <div>Milk Info</div>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="panel-footer">
-                                <span class="pull-left">Customer Milk Info</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-
-                    </div>
-                    </a>
-                </div>
+			<!--
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="alert alert-info alert-dismissable">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							<i class="fa fa-info-circle"></i>  <strong>Dairy Management</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Dairy Management</a>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
 
 
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewFinance">
-                    <div class="panel panel-black">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-money fa-4x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">5</div>
-                                    <div>Finance Records</div>
-                                </div>
-                            </div>
-                        </div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewHealth">
+						<div class="panel panel-hh">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">1</div>
+										<div>Health Information</div>
+									</div>
+								</div>
+							</div>
 
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
-                    </div>
-                    </a>
-                </div>
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewMilkProduction">
+						<div class="panel panel-yellow">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">2</div>
+										<div>Milk Production</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-footer">
+								<span class="pull-left">View Milk Production</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewBreeding">
+						<div class="panel panel-tt">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">3</div>
+										<div>Breeding Information</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewMilkSold">
+						<div class="panel panel-red">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">4</div>
+										<div>Milk Info</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-footer">
+								<span class="pull-left">Customer Milk Info</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+					</a>
+				</div>
 
 
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewCowsHerd">
-                    <div class="panel panel-white">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">6</div>
-                                    <div>Monitor Dairy Herd</div>
-                                </div>
-                            </div>
-                        </div>
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewFinance">
+						<div class="panel panel-black">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class="fa fa-money fa-4x"></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">5</div>
+										<div>Finance Records</div>
+									</div>
+								</div>
+							</div>
 
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
-                    </div>
-                    </a>
-                </div>
+								<div class="clearfix"></div>
+							</div>
 
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewFeeds">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">7</div>
-                                    <div>Feed Records</div>
-                                </div>
-                            </div>
-                        </div>
+						</div>
+					</a>
+				</div>
 
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
 
-                    </div>
-                        </a>
-                </div>
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewCowsHerd">
+						<div class="panel panel-white">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">6</div>
+										<div>Monitor Dairy Herd</div>
+									</div>
+								</div>
+							</div>
 
-                <div class="col-lg-3 col-md-6">
-                    <a href="${contextPath}/dairyAdmin/viewWorkers">
-                    <div class="panel panel-pp">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class=""></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">8</div>
-                                    <div>Workers information</div>
-                                </div>
-                            </div>
-                        </div>
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
-                            <div class="panel-footer">
-                                <span class="pull-left">View Information</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
+								<div class="clearfix"></div>
+							</div>
 
-                    </div>
-                        </a>
-                </div>
+						</div>
+					</a>
+				</div>
 
-            </div>
-<!-- /.row -->
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewFeeds">
+						<div class="panel panel-green">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">7</div>
+										<div>Feed Records</div>
+									</div>
+								</div>
+							</div>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>
-            </div>
-            <!--
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
-                <div class="panel-body">
-                    <div id="morris-area-chart"></div>
-                </div>
-            -->
-        </div>
-    </div>
-</div>
-<!-- /.row -->
-<!--
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                                <div class="text-right">
-                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+								<div class="clearfix"></div>
+							</div>
 
-  -->
-<!--
-              <div class="col-lg-4">
-                  <div class="panel panel-default">
-                      <div class="panel-heading">
-                          <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
-                      </div>
-                      <div class="panel-body">
-                          <div class="list-group">
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">just now</span>
-                                  <i class="fa fa-fw fa-calendar"></i> Calendar updated
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">4 minutes ago</span>
-                                  <i class="fa fa-fw fa-comment"></i> Commented on a post
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">23 minutes ago</span>
-                                  <i class="fa fa-fw fa-truck"></i> Order 392 shipped
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">46 minutes ago</span>
-                                  <i class="fa fa-fw fa-money"></i> Invoice 653 has been paid
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">1 hour ago</span>
-                                  <i class="fa fa-fw fa-user"></i> A new user has been added
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">2 hours ago</span>
-                                  <i class="fa fa-fw fa-check"></i> Completed task: "pick up dry cleaning"
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">yesterday</span>
-                                  <i class="fa fa-fw fa-globe"></i> Saved the world
-                              </a>
-                              <a href="#" class="list-group-item">
-                                  <span class="badge">two days ago</span>
-                                  <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"
-                              </a>
-                          </div>
-                          <div class="text-right">
-                              <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="panel panel-default">
-                      <div class="panel-heading">
-                          <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
-                      </div>
-                      <div class="panel-body">
-                          <div class="table-responsive">
-                              <table class="table table-bordered table-hover table-striped">
-                                  <thead>
-                                      <tr>
-                                          <th>Order #</th>
-                                          <th>Order Date</th>
-                                          <th>Order Time</th>
-                                          <th>Amount (USD)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <td>3326</td>
-                                          <td>10/21/2013</td>
-                                          <td>3:29 PM</td>
-                                          <td>$321.33</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3325</td>
-                                          <td>10/21/2013</td>
-                                          <td>3:20 PM</td>
-                                          <td>$234.34</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3324</td>
-                                          <td>10/21/2013</td>
-                                          <td>3:03 PM</td>
-                                          <td>$724.17</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3323</td>
-                                          <td>10/21/2013</td>
-                                          <td>3:00 PM</td>
-                                          <td>$23.71</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3322</td>
-                                          <td>10/21/2013</td>
-                                          <td>2:49 PM</td>
-                                          <td>$8345.23</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3321</td>
-                                          <td>10/21/2013</td>
-                                          <td>2:23 PM</td>
-                                          <td>$245.12</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3320</td>
-                                          <td>10/21/2013</td>
-                                          <td>2:15 PM</td>
-                                          <td>$5663.54</td>
-                                      </tr>
-                                      <tr>
-                                          <td>3319</td>
-                                          <td>10/21/2013</td>
-                                          <td>2:13 PM</td>
-                                          <td>$943.45</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                          <div class="text-right">
-                              <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- /.row -->
+						</div>
+					</a>
+				</div>
 
-</div>
-<!-- /.container-fluid -->
+				<div class="col-lg-3 col-md-6">
+					<a href="${contextPath}/dairyAdmin/viewWorkers">
+						<div class="panel panel-pp">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-xs-3">
+										<i class=""></i>
+									</div>
+									<div class="col-xs-9 text-right">
+										<div class="huge">8</div>
+										<div>Workers information</div>
+									</div>
+								</div>
+							</div>
 
-</div>
-<!-- /#page-wrapper -->
+							<div class="panel-footer">
+								<span class="pull-left">View Information</span>
+								<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+								<div class="clearfix"></div>
+							</div>
+
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<!-- /.row -->
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>
+						</div>
+						<!--
+
+							<div class="panel-body">
+								<div id="morris-area-chart"></div>
+							</div>
+						-->
+					</div>
+				</div>
+			</div>
+			<!-- /.row -->
+			<!--
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
+										</div>
+										<div class="panel-body">
+											<div id="morris-donut-chart"></div>
+											<div class="text-right">
+												<a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+			  -->
+			<!--
+						  <div class="col-lg-4">
+							  <div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
+								  </div>
+								  <div class="panel-body">
+									  <div class="list-group">
+										  <a href="#" class="list-group-item">
+											  <span class="badge">just now</span>
+											  <i class="fa fa-fw fa-calendar"></i> Calendar updated
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">4 minutes ago</span>
+											  <i class="fa fa-fw fa-comment"></i> Commented on a post
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">23 minutes ago</span>
+											  <i class="fa fa-fw fa-truck"></i> Order 392 shipped
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">46 minutes ago</span>
+											  <i class="fa fa-fw fa-money"></i> Invoice 653 has been paid
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">1 hour ago</span>
+											  <i class="fa fa-fw fa-user"></i> A new user has been added
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">2 hours ago</span>
+											  <i class="fa fa-fw fa-check"></i> Completed task: "pick up dry cleaning"
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">yesterday</span>
+											  <i class="fa fa-fw fa-globe"></i> Saved the world
+										  </a>
+										  <a href="#" class="list-group-item">
+											  <span class="badge">two days ago</span>
+											  <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"
+										  </a>
+									  </div>
+									  <div class="text-right">
+										  <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+						  <div class="col-lg-4">
+							  <div class="panel panel-default">
+								  <div class="panel-heading">
+									  <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
+								  </div>
+								  <div class="panel-body">
+									  <div class="table-responsive">
+										  <table class="table table-bordered table-hover table-striped">
+											  <thead>
+												  <tr>
+													  <th>Order #</th>
+													  <th>Order Date</th>
+													  <th>Order Time</th>
+													  <th>Amount (USD)</th>
+												  </tr>
+											  </thead>
+											  <tbody>
+												  <tr>
+													  <td>3326</td>
+													  <td>10/21/2013</td>
+													  <td>3:29 PM</td>
+													  <td>$321.33</td>
+												  </tr>
+												  <tr>
+													  <td>3325</td>
+													  <td>10/21/2013</td>
+													  <td>3:20 PM</td>
+													  <td>$234.34</td>
+												  </tr>
+												  <tr>
+													  <td>3324</td>
+													  <td>10/21/2013</td>
+													  <td>3:03 PM</td>
+													  <td>$724.17</td>
+												  </tr>
+												  <tr>
+													  <td>3323</td>
+													  <td>10/21/2013</td>
+													  <td>3:00 PM</td>
+													  <td>$23.71</td>
+												  </tr>
+												  <tr>
+													  <td>3322</td>
+													  <td>10/21/2013</td>
+													  <td>2:49 PM</td>
+													  <td>$8345.23</td>
+												  </tr>
+												  <tr>
+													  <td>3321</td>
+													  <td>10/21/2013</td>
+													  <td>2:23 PM</td>
+													  <td>$245.12</td>
+												  </tr>
+												  <tr>
+													  <td>3320</td>
+													  <td>10/21/2013</td>
+													  <td>2:15 PM</td>
+													  <td>$5663.54</td>
+												  </tr>
+												  <tr>
+													  <td>3319</td>
+													  <td>10/21/2013</td>
+													  <td>2:13 PM</td>
+													  <td>$943.45</td>
+												  </tr>
+											  </tbody>
+										  </table>
+									  </div>
+									  <div class="text-right">
+										  <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+					  <!-- /.row -->
+
+		</div>
+		<!-- /.container-fluid -->
+
+	</div>
+	<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->

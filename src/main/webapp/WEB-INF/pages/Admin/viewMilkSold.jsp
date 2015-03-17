@@ -15,29 +15,30 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>Dairy-Farm-Management</title>
+	<title>Dairy-Farm-Management</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Core CSS -->
+	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="${pageContext.request.contextPath}/resources/css/sb-admin.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Custom Fonts -->
+	<link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	      type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
@@ -46,305 +47,321 @@
 <c:url var="logout" value="/j_spring_security_logout"/>
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
-        </div>
-        <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu message-dropdown">
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/dairyAdmin">Dairy-Farm-Management</a>
+		</div>
+		<!-- Top Menu Items -->
+		<ul class="nav navbar-right top-nav">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu message-dropdown">
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <strong>${dairyAdminNm} </strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+
+								<div class="media-body">
+									<h5 class="media-heading">
+										<strong>${dairyAdminNm} </strong>
+									</h5>
+
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+
+									<p>Lorem ipsum dolor sit amet, consectetur...</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <strong>${dairyAdminNm} </strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
+
+								<div class="media-body">
+									<h5 class="media-heading">
+										<strong>${dairyAdminNm} </strong>
+									</h5>
+
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+
+									<p>Lorem ipsum dolor sit amet, consectetur...</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-preview">
+						<a href="#">
+							<div class="media">
                                     <span class="pull-left">
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <strong>${dairyAdminNm}</strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="message-footer">
-                        <a href="#">Read All New Messages</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu alert-dropdown">
-                    <li>
-                        <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">View All</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${dairyAdminNm} <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="${logout}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li >
-                    <a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                </li>
-                <li >
-                    <a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
-                </li>
-                <li >
-                    <a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
-                </li>
-                <li>
-                    <a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health Information</a>
-                </li>
-                <li >
-                    <a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
-                </li>
-                <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                    <ul id="demo" class="collapse">
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
-                        </li>
-                        <li>
-                            <a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
-                        </li>
-                    </ul>
-                </li>
-                <li >
-                    <a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                </li>
-                <li>
-                    <a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
 
-    <div id="page-wrapper">
+								<div class="media-body">
+									<h5 class="media-heading">
+										<strong>${dairyAdminNm}</strong>
+									</h5>
 
-        <div class="container-fluid">
+									<p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
 
-            <!-- Page Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">
-                        Dairy-Farm-Management-System
-                        <small></small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li>
-                            <i class="fa fa-dashboard"></i>  <a href="${contextPath}/dairyAdmin">Dashboard</a>
-                        </li>
-                        <li >
-                            <i class="fa fa-file"></i> Sold Milk Page
-                        </li>
-                    </ol>
-                </div>
-            </div>
+									<p>Lorem ipsum dolor sit amet, consectetur...</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="message-footer">
+						<a href="#">Read All New Messages</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu alert-dropdown">
+					<li>
+						<a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+					</li>
+					<li>
+						<a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+					</li>
+					<li>
+						<a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+					</li>
+					<li>
+						<a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+					</li>
+					<li>
+						<a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+					</li>
+					<li>
+						<a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="#">View All</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> ${dairyAdminNm} <b
+						class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="${logout}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li>
+					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/breeding"><i class="fa fa-fw fa-edit"></i> Enter Breeding Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/mealTaken"><i class="fa fa-fw fa-edit"></i> Enter Meal Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/cowHealth"><i class="fa fa-fw fa-edit"></i> Enter Health
+						Information</a>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/sellMilk"><i class="fa fa-bitbucket"></i> Sell Milk</a>
+				</li>
+				<li>
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>
+						Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+					<ul id="demo" class="collapse">
+						<li>
+							<a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
+						</li>
+						<li>
+							<a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+				</li>
+				<li>
+					<a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
 
-            <!-- /.row1 -->
+	<div id="page-wrapper">
 
+		<div class="container-fluid">
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <form>
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">
+						Dairy-Farm-Management-System
+						<small></small>
+					</h1>
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i> <a href="${contextPath}/dairyAdmin">Dashboard</a>
+						</li>
+						<li>
+							<i class="fa fa-file"></i> Sold Milk Page
+						</li>
+					</ol>
+				</div>
+			</div>
 
-                        <input type="text" id="search" name="search" placeholder="search">
-                        <button type="submit" class="btn btn-default">Search</button>
-                    </form>
-
-                </div>
-            </div>
-            <!-- /.row1 -->
-            <!-- /.row2 -->
-
-            <div class="row">
+			<!-- /.row1 -->
 
 
+			<div class="row">
+				<div class="col-lg-6">
+					<form>
 
-                <div class="col-lg-12">
+						<input type="text" id="search" name="search" placeholder="search">
+						<button type="submit" class="btn btn-default">Search</button>
+					</form>
 
-                    <form role="form">
+				</div>
+			</div>
+			<!-- /.row1 -->
+			<!-- /.row2 -->
 
-                        <h4>Sold Milk Information</h4>
-                        <div  id="mydata">
-                            <br/>
-                            <c:if test="${not empty error}">
-                                <div class="alert alert-danger" id="viewGroup_error_alert"><i class="fa fa-ban"></i> ${error}</div>
-                            </c:if>
-                            <c:if test="${not empty message}">
-                                <div class="alert alert-success" id="viewGroup_message_alert"><i class="fa fa-check"></i> ${message}</div>
-                            </c:if>
-                            <c:if test="${not empty info}">
-                                <div class="alert alert-info" id="loadGroup_message_alert"><i class="fa fa-info-circle"></i> ${info}</div>
-                            </c:if>
-                            <br/>
-                            <c:if test="${!empty listMilkSold}">
-                                <table class="table table-bordered table-hover table-striped" id="milkSold">
-
-                                    <thead>
-                                    <tr>
-
-                                        <th>Customer-ID</th>
-                                        <th>Time</th>
-                                        <th>Quantity in Liter</th>
-                                        <th>Total Cost</th>
-                                        <th>Date</th>
-                                        <th width="40px"></th>
+			<div class="row">
 
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <c:forEach items="${listMilkSold}" var="milkSold">
-                                        <tr>
+				<div class="col-lg-12">
 
-                                            <td>${milkSold.customerId}</td>
-                                            <td>${milkSold.time}</td>
-                                            <td>${milkSold.quantity}</td>
-                                            <td>${milkSold.total}</td>
-                                            <td>${milkSold.date}</td>
-                                            <td width="40px">
-                                                <a href="<c:url value="/dairyAdmin/milkSold/remove/${milkSold.customerId}"/>"
-                                                   class="btn btn-sm btn-danger"
-                                                   data-confirm="Are you sure you want to delete?"><i
-                                                        class="ion ion-ios7-trash"></i> Delete</a>
+					<form role="form">
 
-                                            </td>
+						<h4>Sold Milk Information</h4>
 
+						<div id="mydata">
+							<br/>
+							<c:if test="${not empty error}">
+								<div class="alert alert-danger" id="viewGroup_error_alert"><i class="fa fa-ban"></i> ${error}
+								</div>
+							</c:if>
+							<c:if test="${not empty message}">
+								<div class="alert alert-success" id="viewGroup_message_alert"><i
+										class="fa fa-check"></i> ${message}</div>
+							</c:if>
+							<c:if test="${not empty info}">
+								<div class="alert alert-info" id="loadGroup_message_alert"><i
+										class="fa fa-info-circle"></i> ${info}</div>
+							</c:if>
+							<br/>
+							<c:if test="${!empty listMilkSold}">
+								<table class="table table-bordered table-hover table-striped" id="milkSold">
 
-                                        </tr>
-                                    </c:forEach>
-                                    </tbody>
-                                </table>
-                            </c:if>
+									<thead>
+									<tr>
 
-                            <c:if test="${empty listMilkSold}">
-                                <table id="milkSold" class="table table-bordered table-hover table-striped" width="100%"
-                                       cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th>Customer-ID</th>
-                                        <th>Time</th>
-                                        <th>Quantity in Liter</th>
-                                        <th>Total Cost</th>
-                                        <th>Date</th>
-                                        <th width="40px"></th>
-
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <c:forEach items="${listMilkSold}" var="milkSold">
-
-                                    </c:forEach>
-                                    </tbody>
-                                </table>
-                            </c:if>
+										<th>Customer-ID</th>
+										<th>Time</th>
+										<th>Quantity in Liter</th>
+										<th>Total Cost</th>
+										<th>Date</th>
+										<th width="40px"></th>
 
 
-                        </div>
+									</tr>
+									</thead>
+									<tbody>
+									<c:forEach items="${listMilkSold}" var="milkSold">
+										<tr>
+
+											<td>${milkSold.customerId}</td>
+											<td>${milkSold.time}</td>
+											<td>${milkSold.quantity}</td>
+											<td>${milkSold.total}</td>
+											<td>${milkSold.date}</td>
+											<td width="40px">
+												<a href="<c:url value="/dairyAdmin/milkSold/remove/${milkSold.customerId}"/>"
+												   class="btn btn-sm btn-danger"
+												   data-confirm="Are you sure you want to delete?"><i
+														class="ion ion-ios7-trash"></i> Delete</a>
+
+											</td>
 
 
+										</tr>
+									</c:forEach>
+									</tbody>
+								</table>
+							</c:if>
 
-                    </form>
-                </div>
+							<c:if test="${empty listMilkSold}">
+								<table id="milkSold" class="table table-bordered table-hover table-striped" width="100%"
+								       cellspacing="0">
+									<thead>
+									<tr>
+										<th>Customer-ID</th>
+										<th>Time</th>
+										<th>Quantity in Liter</th>
+										<th>Total Cost</th>
+										<th>Date</th>
+										<th width="40px"></th>
 
-            </div>
+									</tr>
+									</thead>
+									<tbody>
+									<c:forEach items="${listMilkSold}" var="milkSold">
+
+									</c:forEach>
+									</tbody>
+								</table>
+							</c:if>
 
 
-        </div>
-        <!-- /.container-fluid -->
+						</div>
 
-    </div>
-    <!-- /#page-wrapper -->
+
+					</form>
+				</div>
+
+			</div>
+
+
+		</div>
+		<!-- /.container-fluid -->
+
+	</div>
+	<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->

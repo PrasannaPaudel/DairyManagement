@@ -40,12 +40,33 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function (ev) {
+                var href = $(this).attr('href');
+                if (!$('#dataConfirmModal').length) {
+                    $('body').append('<div class="modal fade" id="dataConfirmModal" tabindex="-1" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header bg-black"><h4 class="modal-title center" id="myModalLabel">Please Confirm</h4></div><div class="modal-body center"></div><div class="modal-footer"><a class="btn btn-danger btn-sm" id="dataConfirmOK"><i class="ion ion-ios7-trash"></i> Delete</a><button class="btn btn-info btn-sm" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove"></i> Cancel</button></div></div></div></div>');
+                }
+                $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+                $('#dataConfirmOK').attr('href', href);
+                $('#dataConfirmModal').modal({show: true});
+                return false;
+            });
+        });
+    </script>
+
 </head>
 
 <body>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <c:url var="logout" value="/j_spring_security_logout"/>
 <div id="wrapper">
+
+    <!-- modal -->
+
+
+    <!-- Modal -->
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

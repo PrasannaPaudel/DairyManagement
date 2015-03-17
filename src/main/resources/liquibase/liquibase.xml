@@ -5,475 +5,478 @@
                    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-    <property name="now" value="NOW()" dbms="mysql"/>
-    <changeSet id="dairyFarming-v1.0.0" author="Peter Muthaka">
-        <comment>Holds the common person attributtes in the system</comment>
-        <createTable tableName="users">
-            <column name="userId" type="int"
-                    autoIncrement="true">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="userUuid" type="varchar(255)">
-                <constraints primaryKey="true" nullable="false" unique="true"/>
-            </column>
-            <column name="firstname" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="secondname" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="lastname" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="gender" type="varchar(8)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="idnumber" type="int">
-                <constraints nullable="true"/>
-            </column>
+	<property name="now" value="NOW()" dbms="mysql"/>
+	<changeSet id="dairyFarming-v1.0.0" author="Peter Muthaka">
+		<comment>Holds the common person attributtes in the system</comment>
+		<createTable tableName="users">
+			<column name="userId" type="int"
+			        autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="userUuid" type="varchar(255)">
+				<constraints primaryKey="true" nullable="false" unique="true"/>
+			</column>
+			<column name="firstname" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="secondname" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="lastname" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="gender" type="varchar(8)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="idnumber" type="int">
+				<constraints nullable="true"/>
+			</column>
 
-            <column name="residence" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
+			<column name="residence" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
 
-            <column name="phonenumber" type="BIGINT(20)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="email" type="varchar(255)">
-                <constraints nullable="true"/>
-            </column>
+			<column name="phonenumber" type="BIGINT(20)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="email" type="varchar(255)">
+				<constraints nullable="true"/>
+			</column>
 
-            <column name="dateOfBirth" type="date">
-                <constraints nullable="true"/>
-            </column>
-            <column name="nextOfKinFirstname" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="nextOfKinSecondname" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="nextOfKinContacts" type="BIGINT(20)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dateCreated" type="timestamp"
-                    defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
+			<column name="dateOfBirth" type="date">
+				<constraints nullable="true"/>
+			</column>
+			<column name="nextOfKinFirstname" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="nextOfKinSecondname" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="nextOfKinContacts" type="BIGINT(20)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="dateCreated" type="timestamp"
+			        defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
 
-        </createTable>
-        <insert tableName="users">
-            <column name="userUuid" value="51dc30ddc473d43a6011e9ebba6ca770"/>
-            <column name="firstname" value="peter"/>
-            <column name="secondname" value="muthaka"/>
-            <column name="lastname" value="muthaka"/>
-            <column name="gender" value="male"/>
-            <column name="idnumber" value="29379856"/>
-            <column name="residence" value="Kasarani"/>
-            <column name="phonenumber" value="0716791692"/>
-            <column name="email" value="pkmuthaka@gmail.com"/>
-            <column name="dateOfBirth" value="1992-09-10"/>
-            <column name="nextOfKinFirstname" value="john"/>
-            <column name="nextOfKinSecondname" value="Muthaka"/>
-            <column name="nextOfKinContacts" value="0721737751"/>
-        </insert>
-        <insert tableName="users">
-            <column name="userUuid" value="cb07901c53218323c4ceacdea4b23c98"/>
-            <column name="firstname" value="joseph"/>
-            <column name="secondname" value="muthaka"/>
-            <column name="lastname" value="kimani"/>
-            <column name="gender" value="male"/>
-            <column name="idnumber" value="28448404"/>
-            <column name="residence" value="nyandarua"/>
-            <column name="phonenumber" value="0716791692"/>
-            <column name="email" value="pkmuthaka@gmail.com"/>
-            <column name="dateOfBirth" value="1990-09-10"/>
-            <column name="nextOfKinFirstname" value="leah"/>
-            <column name="nextOfKinSecondname" value="Muthaka"/>
-            <column name="nextOfKinContacts" value="0722688648"/>
-        </insert>
-        <insert tableName="users">
-            <column name="userUuid" value="d8ae5776067290c4712fa454006c8ec6"/>
-            <column name="firstname" value="samuel"/>
-            <column name="secondname" value="njuguna"/>
-            <column name="lastname" value="ikinya"/>
-            <column name="gender" value="male"/>
-            <column name="idnumber" value="29379856"/>
-            <column name="residence" value="Kasarani"/>
-            <column name="phonenumber" value="0716791692"/>
-            <column name="email" value="samuel@gmail.com"/>
-            <column name="dateOfBirth" value="1988-09-10"/>
-            <column name="nextOfKinFirstname" value="naomi"/>
-            <column name="nextOfKinSecondname" value="njoki"/>
-            <column name="nextOfKinContacts" value="0721737751"/>
-        </insert>
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.1" author="Peter Muthaka">
-        <comment>This is the table to hold the staff attributes</comment>
-        <createTable tableName="Staff">
-            <column name="userId" autoIncrement="true" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="staffUuid" type="varchar(255)">
-                <constraints nullable="false" unique="true"/>
-            </column>
-            <column name="username" type="varchar(255)">
-                <constraints nullable="false" unique="true"/>
-            </column>
-            <column name="password" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="workNumber" type="varchar(255)">
-                <constraints nullable="false" unique="true"/>
-            </column>
-            <column name="createdBy" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="retired" type="TINYINT" defaultValue="TRUE">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dateRetired" type="timestamp">
-                <constraints nullable="true"/>
-            </column>
+		</createTable>
+		<insert tableName="users">
+			<column name="userUuid" value="51dc30ddc473d43a6011e9ebba6ca770"/>
+			<column name="firstname" value="peter"/>
+			<column name="secondname" value="muthaka"/>
+			<column name="lastname" value="muthaka"/>
+			<column name="gender" value="male"/>
+			<column name="idnumber" value="29379856"/>
+			<column name="residence" value="Kasarani"/>
+			<column name="phonenumber" value="0716791692"/>
+			<column name="email" value="pkmuthaka@gmail.com"/>
+			<column name="dateOfBirth" value="1992-09-10"/>
+			<column name="nextOfKinFirstname" value="john"/>
+			<column name="nextOfKinSecondname" value="Muthaka"/>
+			<column name="nextOfKinContacts" value="0721737751"/>
+		</insert>
+		<insert tableName="users">
+			<column name="userUuid" value="cb07901c53218323c4ceacdea4b23c98"/>
+			<column name="firstname" value="joseph"/>
+			<column name="secondname" value="muthaka"/>
+			<column name="lastname" value="kimani"/>
+			<column name="gender" value="male"/>
+			<column name="idnumber" value="28448404"/>
+			<column name="residence" value="nyandarua"/>
+			<column name="phonenumber" value="0716791692"/>
+			<column name="email" value="pkmuthaka@gmail.com"/>
+			<column name="dateOfBirth" value="1990-09-10"/>
+			<column name="nextOfKinFirstname" value="leah"/>
+			<column name="nextOfKinSecondname" value="Muthaka"/>
+			<column name="nextOfKinContacts" value="0722688648"/>
+		</insert>
+		<insert tableName="users">
+			<column name="userUuid" value="d8ae5776067290c4712fa454006c8ec6"/>
+			<column name="firstname" value="samuel"/>
+			<column name="secondname" value="njuguna"/>
+			<column name="lastname" value="ikinya"/>
+			<column name="gender" value="male"/>
+			<column name="idnumber" value="29379856"/>
+			<column name="residence" value="Kasarani"/>
+			<column name="phonenumber" value="0716791692"/>
+			<column name="email" value="samuel@gmail.com"/>
+			<column name="dateOfBirth" value="1988-09-10"/>
+			<column name="nextOfKinFirstname" value="naomi"/>
+			<column name="nextOfKinSecondname" value="njoki"/>
+			<column name="nextOfKinContacts" value="0721737751"/>
+		</insert>
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.1" author="Peter Muthaka">
+		<comment>This is the table to hold the staff attributes</comment>
+		<createTable tableName="Staff">
+			<column name="userId" autoIncrement="true" type="int">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="staffUuid" type="varchar(255)">
+				<constraints nullable="false" unique="true"/>
+			</column>
+			<column name="username" type="varchar(255)">
+				<constraints nullable="false" unique="true"/>
+			</column>
+			<column name="password" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="workNumber" type="varchar(255)">
+				<constraints nullable="false" unique="true"/>
+			</column>
+			<column name="createdBy" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="retired" type="TINYINT" defaultValue="TRUE">
+				<constraints nullable="false"/>
+			</column>
+			<column name="dateRetired" type="timestamp">
+				<constraints nullable="true"/>
+			</column>
 
-        </createTable>
-
-
-        <insert tableName="Staff">
-            <column name="staffUuid" value="51dc30ddc473d43a6011e9ebba6ca770"/>
-            <column name="username" value="fadmin"/>
-            <column name="password" value="Fadmin1234"/>
-            <column name="workNumber" value="FMS/001/2015"/>
-            <column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
-        </insert>
-        <insert tableName="Staff">
-            <column name="staffUuid" value="cb07901c53218323c4ceacdea4b23c98"/>
-            <column name="username" value="fworker"/>
-            <column name="password" value="Fworker1234"/>
-            <column name="workNumber" value="FMS/002/2015"/>
-            <column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
-        </insert>
-        <insert tableName="Staff">
-            <column name="staffUuid" value="d8ae5776067290c4712fa454006c8ec6"/>
-            <column name="username" value="samuel"/>
-            <column name="password" value="Samuel1234"/>
-            <column name="workNumber" value="FMS/003/2014"/>
-            <column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
-            <column name="retired" valueBoolean="False"/>
-            <column name="dateRetired" value="${now}"/>
-
-        </insert>
-    </changeSet>
-
-    <changeSet id="dairyFarming-v1.0.2" author="Peter Muthaka">
-        <comment>This table is to store the user roles that will be used to make the users</comment>
-        <createTable tableName="userRoles">
-            <column name="userRoleId" autoIncrement="true" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="userRoleUuid" type="varchar(255)">
-                <constraints nullable="false" unique="true"/>
-            </column>
-            <column name="username" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="ROLE" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-        <insert tableName="userRoles">
-            <column name="userRoleUuid" value="1f9bf126-0bb7-4bc1-a29a-636d3967a9bf"/>
-            <column name="username" value="fadmin"/>
-            <column name="ROLE" value="ROLE_FIRMADMIN"/>
-        </insert>
-        <insert tableName="userRoles">
-            <column name="userRoleUuid" value="64a75360-0184-4e1b-8eac-41f00c03a97a"/>
-            <column name="username" value="fworker"/>
-            <column name="ROLE" value="ROLE_FIRMWORKER"/>
-        </insert>
-        <insert tableName="userRoles">
-            <column name="userRoleUuid" value="64a75360-0184-4e1b-8eac-41f00c73a97a"/>
-            <column name="username" value="samuel"/>
-            <column name="ROLE" value="ROLE_USER"/>
-        </insert>
-
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.3" author="Peter Muthaka">
-        <comment>Table to handle Milk Produced</comment>
-        <createTable tableName="milkProduction">
-            <column name="milkId" autoIncrement="true" type="int">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="milkProductionUuid" type="varchar(255)">-->
-                <!--<constraints nullable="true" unique="false"/>-->
-            <!--</column>-->
-            <column name="cowId" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="time" type="varchar(20)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="amountProduced" type="varchar(20)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.4" author="Peter Muthaka">
-        <comment>This table will handle registration of Cows</comment>
-        <createTable tableName="cowRegistration">
-            <column name="cowId" autoIncrement="true" type="int">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="cowUuid" type="varchar(255)">-->
-                <!--<constraints nullable="true" unique="false"/>-->
-            <!--</column>-->
-            <column name="breed" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="gender" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dob" type="date">
-                <constraints nullable="true"/>
-            </column>
-            <column name="relatedTo" type="varchar(45)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="Relationship" type="varchar(45)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-
-        </createTable>
-
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.5" author="Peter Muthaka">
-        <comment>This table handles health Records</comment>
-        <createTable tableName="healthRecords">
-            <column name="healthId" type="int" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="healthUuid" type="varchar(255)">-->
-                <!--<constraints nullable="false" unique="true"/>-->
-            <!--</column>-->
-            <column name="cowId" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="diseaseType" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="symptoms" type="varchar(100)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="medicine" type="varchar(60)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="treatmentCost" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-
-        </createTable>
-
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.6" author="Peter Muthaka">
-        <comment>This table handles breeding Records</comment>
-        <createTable tableName="breeding">
-            <column name="breedId" autoIncrement="true" type="int">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="breedUuid" type="varchar(255)">-->
-                <!--<constraints unique="true" nullable="false"/>-->
-            <!--</column>-->
-            <column name="cowId" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="semenType" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="nameOfSeminator" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="breedingCost" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
+		</createTable>
 
 
+		<insert tableName="Staff">
+			<column name="staffUuid" value="51dc30ddc473d43a6011e9ebba6ca770"/>
+			<column name="username" value="fadmin"/>
+			<column name="password" value="Fadmin1234"/>
+			<column name="workNumber" value="FMS/001/2015"/>
+			<column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
+		</insert>
+		<insert tableName="Staff">
+			<column name="staffUuid" value="cb07901c53218323c4ceacdea4b23c98"/>
+			<column name="username" value="fworker"/>
+			<column name="password" value="Fworker1234"/>
+			<column name="workNumber" value="FMS/002/2015"/>
+			<column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
+		</insert>
+		<insert tableName="Staff">
+			<column name="staffUuid" value="d8ae5776067290c4712fa454006c8ec6"/>
+			<column name="username" value="samuel"/>
+			<column name="password" value="Samuel1234"/>
+			<column name="workNumber" value="FMS/003/2014"/>
+			<column name="createdBy" value="38bbf90d-3ffa-45a4-a4fa-a5cc6bbe9d96"/>
+			<column name="retired" valueBoolean="False"/>
+			<column name="dateRetired" value="${now}"/>
 
-    </changeSet>
+		</insert>
+	</changeSet>
 
-    <changeSet id="dairyFarming-v1.0.7" author="Peter Muthaka">
-        <comment>This table handles dairy feeds Records</comment>
-        <createTable tableName="dairyFeeds">
-            <column name="dairyId" autoIncrement="true" type="int">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <column name="cowId" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="mealType" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="quantity" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
+	<changeSet id="dairyFarming-v1.0.2" author="Peter Muthaka">
+		<comment>This table is to store the user roles that will be used to make the users</comment>
+		<createTable tableName="userRoles">
+			<column name="userRoleId" autoIncrement="true" type="int">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="userRoleUuid" type="varchar(255)">
+				<constraints nullable="false" unique="true"/>
+			</column>
+			<column name="username" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="ROLE" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+		<insert tableName="userRoles">
+			<column name="userRoleUuid" value="1f9bf126-0bb7-4bc1-a29a-636d3967a9bf"/>
+			<column name="username" value="fadmin"/>
+			<column name="ROLE" value="ROLE_FIRMADMIN"/>
+		</insert>
+		<insert tableName="userRoles">
+			<column name="userRoleUuid" value="64a75360-0184-4e1b-8eac-41f00c03a97a"/>
+			<column name="username" value="fworker"/>
+			<column name="ROLE" value="ROLE_FIRMWORKER"/>
+		</insert>
+		<insert tableName="userRoles">
+			<column name="userRoleUuid" value="64a75360-0184-4e1b-8eac-41f00c73a97a"/>
+			<column name="username" value="samuel"/>
+			<column name="ROLE" value="ROLE_USER"/>
+		</insert>
 
-        </createTable>
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.3" author="Peter Muthaka">
+		<comment>Table to handle Milk Produced</comment>
+		<createTable tableName="milkProduction">
+			<column name="milkId" autoIncrement="true" type="int">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="milkProductionUuid" type="varchar(255)">-->
+			<!--<constraints nullable="true" unique="false"/>-->
+			<!--</column>-->
+			<column name="cowId" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="time" type="varchar(20)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="amountProduced" type="varchar(20)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.4" author="Peter Muthaka">
+		<comment>This table will handle registration of Cows</comment>
+		<createTable tableName="cowRegistration">
+			<column name="cowId" autoIncrement="true" type="int">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="cowUuid" type="varchar(255)">-->
+			<!--<constraints nullable="true" unique="false"/>-->
+			<!--</column>-->
+			<column name="breed" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="gender" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="dob" type="date">
+				<constraints nullable="true"/>
+			</column>
+			<column name="relatedTo" type="varchar(45)">
+				<constraints nullable="true"/>
+			</column>
+			<column name="Relationship" type="varchar(45)">
+				<constraints nullable="true"/>
+			</column>
+			<column name="Status" type="varchar(100)">
+				<constraints nullable="true"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+
+		</createTable>
+
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.5" author="Peter Muthaka">
+		<comment>This table handles health Records</comment>
+		<createTable tableName="healthRecords">
+			<column name="healthId" type="int" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="healthUuid" type="varchar(255)">-->
+			<!--<constraints nullable="false" unique="true"/>-->
+			<!--</column>-->
+			<column name="cowId" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="diseaseType" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="symptoms" type="varchar(100)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="medicine" type="varchar(60)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="treatmentCost" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+
+		</createTable>
+
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.6" author="Peter Muthaka">
+		<comment>This table handles breeding Records</comment>
+		<createTable tableName="breeding">
+			<column name="breedId" autoIncrement="true" type="int">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="breedUuid" type="varchar(255)">-->
+			<!--<constraints unique="true" nullable="false"/>-->
+			<!--</column>-->
+			<column name="cowId" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="semenType" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="nameOfSeminator" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="breedingCost" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
 
 
-        <createTable tableName="customers">
-            <column name="customerId" type="int" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <column name="customerName" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
+	</changeSet>
 
-            <column name="customerType" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
+	<changeSet id="dairyFarming-v1.0.7" author="Peter Muthaka">
+		<comment>This table handles dairy feeds Records</comment>
+		<createTable tableName="dairyFeeds">
+			<column name="dairyId" autoIncrement="true" type="int">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<column name="cowId" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="mealType" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="quantity" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
 
-        <createTable tableName="milkSold">
-            <column name="sellId" type="int" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <column name="customerId" type="int">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="time" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="quantity" type="int">
-                <constraints nullable="true"/>
-            </column>
-            <column name="cost" type="int">
-                <constraints nullable="true"/>
-            </column>
-            <column name="total" type="int">
-                <constraints nullable="true"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
+		</createTable>
 
 
+		<createTable tableName="customers">
+			<column name="customerId" type="int" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<column name="customerName" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
 
-    </changeSet>
-    <changeSet id="dairyFarming-v1.0.8" author="Peter Muthaka">
-        <comment>This table handles financial Records</comment>
-        <createTable tableName="financialRecords">
-            <column name="recordId" type="int" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="recordUuid" type="varchar(255)">-->
-                <!--<constraints nullable="false" unique="true"/>-->
-            <!--</column>-->
-            <column name="feedingCost" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="BreedingCost" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="treatmentCost" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="WorkersCost" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="totalExpenditure" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="totalIncome" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="profit" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="loss" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="date" type="timestamp" defaultValueDate="${now}">
-                <constraints nullable="false"/>
-            </column>
+			<column name="customerType" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
 
-        </createTable>
-        <createTable tableName="workers">
-            <column name="workerId" type="int" autoIncrement="true">
-                <constraints nullable="false" primaryKey="true"/>
-            </column>
-            <!--<column name="workerUuid" type="int">-->
-                <!--<constraints nullable="false" unique="true"/>-->
-            <!--</column>-->
+		<createTable tableName="milkSold">
+			<column name="sellId" type="int" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<column name="customerId" type="int">
+				<constraints nullable="false"/>
+			</column>
 
-            <column name="userId" type="int">
-                <constraints nullable="false"/>
-            </column>
-            <column name="amountPaid" type="boolean">
-                <constraints nullable="false"/>
-            </column>
-            <column name="duty" type="varchar(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="paymentDate" type="date">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-        <addForeignKeyConstraint baseTableName="workers" baseColumnNames="userId"
-                                 constraintName="workerUserIdFK"
-                                 referencedTableName="users" referencedColumnNames="userId"/>
+			<column name="time" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="quantity" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="cost" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="total" type="int">
+				<constraints nullable="true"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
 
-        <addForeignKeyConstraint baseTableName="Staff" baseColumnNames="userId" constraintName="userIdFK"
-                                 referencedTableName="users"
-                                 referencedColumnNames="userId"/>
-        <addForeignKeyConstraint baseTableName="Staff" baseColumnNames="staffUuid" constraintName="staffIDFK"
-                                 referencedTableName="users"
-                                 referencedColumnNames="userUuid"/>
 
-        <addForeignKeyConstraint baseTableName="milkProduction" baseColumnNames="cowId"
-                                 constraintName="milkCowIdFK"
-                                 referencedTableName="cowRegistration"
-                                 referencedColumnNames="cowId"/>
+	</changeSet>
+	<changeSet id="dairyFarming-v1.0.8" author="Peter Muthaka">
+		<comment>This table handles financial Records</comment>
+		<createTable tableName="financialRecords">
+			<column name="recordId" type="int" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="recordUuid" type="varchar(255)">-->
+			<!--<constraints nullable="false" unique="true"/>-->
+			<!--</column>-->
+			<column name="feedingCost" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="BreedingCost" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="treatmentCost" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="WorkersCost" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="totalExpenditure" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="totalIncome" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="profit" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="loss" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date" type="timestamp" defaultValueDate="${now}">
+				<constraints nullable="false"/>
+			</column>
 
-        <addForeignKeyConstraint baseTableName="userRoles" baseColumnNames="username" constraintName="username_fk"
-                                 referencedTableName="Staff"
-                                 referencedColumnNames="username"/>
+		</createTable>
+		<createTable tableName="workers">
+			<column name="workerId" type="int" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<!--<column name="workerUuid" type="int">-->
+			<!--<constraints nullable="false" unique="true"/>-->
+			<!--</column>-->
 
-        <addForeignKeyConstraint baseTableName="healthRecords" baseColumnNames="cowId"
-                                 constraintName="healthCowIdFK"
-                                 referencedTableName="cowRegistration"
-                                 referencedColumnNames="cowId"/>
+			<column name="userId" type="int">
+				<constraints nullable="false"/>
+			</column>
+			<column name="amountPaid" type="boolean">
+				<constraints nullable="false"/>
+			</column>
+			<column name="duty" type="varchar(45)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="paymentDate" type="date">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+		<addForeignKeyConstraint baseTableName="workers" baseColumnNames="userId"
+		                         constraintName="workerUserIdFK"
+		                         referencedTableName="users" referencedColumnNames="userId"/>
 
-        <addForeignKeyConstraint baseTableName="breeding" baseColumnNames="cowId"
-                                 constraintName="breedCowIdFK" referencedTableName="cowRegistration" referencedColumnNames="cowId"/>
+		<addForeignKeyConstraint baseTableName="Staff" baseColumnNames="userId" constraintName="userIdFK"
+		                         referencedTableName="users"
+		                         referencedColumnNames="userId"/>
+		<addForeignKeyConstraint baseTableName="Staff" baseColumnNames="staffUuid" constraintName="staffIDFK"
+		                         referencedTableName="users"
+		                         referencedColumnNames="userUuid"/>
 
-        <addForeignKeyConstraint baseTableName="dairyFeeds" baseColumnNames="cowId"
-                                 constraintName="feedsCowIdFK" referencedTableName="cowRegistration" referencedColumnNames="cowId"/>
+		<addForeignKeyConstraint baseTableName="milkProduction" baseColumnNames="cowId"
+		                         constraintName="milkCowIdFK"
+		                         referencedTableName="cowRegistration"
+		                         referencedColumnNames="cowId"/>
 
-        <addForeignKeyConstraint baseTableName="milkSold" baseColumnNames="customerId"
-                                 constraintName="customerIdFK" referencedTableName="customers" referencedColumnNames="customerId"/>
+		<addForeignKeyConstraint baseTableName="userRoles" baseColumnNames="username" constraintName="username_fk"
+		                         referencedTableName="Staff"
+		                         referencedColumnNames="username"/>
 
-    </changeSet>
+		<addForeignKeyConstraint baseTableName="healthRecords" baseColumnNames="cowId"
+		                         constraintName="healthCowIdFK"
+		                         referencedTableName="cowRegistration"
+		                         referencedColumnNames="cowId"/>
 
+		<addForeignKeyConstraint baseTableName="breeding" baseColumnNames="cowId"
+		                         constraintName="breedCowIdFK" referencedTableName="cowRegistration"
+		                         referencedColumnNames="cowId"/>
+
+		<addForeignKeyConstraint baseTableName="dairyFeeds" baseColumnNames="cowId"
+		                         constraintName="feedsCowIdFK" referencedTableName="cowRegistration"
+		                         referencedColumnNames="cowId"/>
+
+		<addForeignKeyConstraint baseTableName="milkSold" baseColumnNames="customerId"
+		                         constraintName="customerIdFK" referencedTableName="customers"
+		                         referencedColumnNames="customerId"/>
+
+	</changeSet>
 
 
 </databaseChangeLog>

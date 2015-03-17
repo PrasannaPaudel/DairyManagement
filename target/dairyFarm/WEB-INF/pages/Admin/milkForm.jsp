@@ -51,7 +51,7 @@
     try{
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dairyFarm?user=root&password=root");
         Statement statement = connection.createStatement() ;
-        resultset =statement.executeQuery("select * from cowregistration") ;
+        resultset =statement.executeQuery("select * from cowregistration WHERE Status='' ") ;
 %>
 <div id="wrapper">
 
@@ -258,8 +258,14 @@
                     <div class="form-group">
                         <label>Time</label>
                         <select class="form-control" name="time" id="time">
-                            <option value="Am">Am</option>
-                            <option value="Pm">Pm</option>
+                            <option value="4:00Am">4:00Am</option>
+                            <option value="5:00Am">5:00Am</option>
+                            <option value="6:00Am">6:00Am</option>
+                            <option value="12:00Pm">12:00Pm</option>
+                            <option value="1:00Pm">1:00Pm</option>
+                            <option value="2:00Pm">2:00Pm</option>
+                            <option value="4:00Pm">4:00Pm</option>
+                            <option value="8:00Pm">8:00Pm</option>
 
                         </select>
                     </div>
