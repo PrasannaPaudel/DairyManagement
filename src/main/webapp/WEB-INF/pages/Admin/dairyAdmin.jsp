@@ -35,8 +35,8 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/html5shiv.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/respond.min.js"></script>
 	<![endif]-->
 
 </head>
@@ -124,17 +124,26 @@
 				</ul>
 			</li>
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell">Users</i> <b
 						class="caret"></b></a>
 				<ul class="dropdown-menu alert-dropdown">
 					<li>
-						<a href="#">Transactions <span class="label label-default">Alert customers</span></a>
+						<a href="${contextPath}/dairyAdmin/userRegistration">Register A user</a>
 					</li>
 					<li>
-						<a href="#">Co-worker <span class="label label-primary">Alert Farm Assistant</span></a>
+						<a href="${contextPath}/dairyAdmin/staffRegistration">Register A Staff</a>
 					</li>
 					<li>
-						<a href="#">Daily-OnGoing <span class="label label-success">Alert Workers</span></a>
+						<a href="${contextPath}/dairyAdmin/adminRegistration">Register Another Admin</a>
+					</li>
+					<li>
+						<a href="${contextPath}/dairyAdmin/workerRegistration">Register a Worker</a>
+					</li>
+					<li>
+						<a href="${contextPath}/dairyAdmin/customerRegistration">Register a Customer</a>
+					</li>
+					<li>
+						<a href="${contextPath}/dairyAdmin/viewCustomer">View Customer</a>
 					</li>
 
 					<li class="divider"></li>
@@ -170,7 +179,7 @@
 					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 				</li>
 				<li>
-					<a href="${contextPath}/dairyAdmin/viewHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+					<a href="${contextPath}/dairyAdmin/regHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
 				</li>
 				<li>
 					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
@@ -213,7 +222,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="${contextPath}/dairyAdmin/blankPage"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+					<a href="${contextPath}/dairyAdmin/viewGraphMilkProduction"><i class="fa fa-fw fa-file"></i> Blank Page</a>
 				</li>
 				<li>
 					<a href="rtl.jsp"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
@@ -469,21 +478,16 @@
 			</div>
 			<!-- /.row -->
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>
-						</div>
-						<!--
-
-							<div class="panel-body">
-								<div id="morris-area-chart"></div>
-							</div>
-						-->
-					</div>
-				</div>
-			</div>
+			<%--<div class="row">--%>
+				<%--<div class="col-lg-12">--%>
+					<%--<div class="panel panel-default">--%>
+						<%--<div class="panel-heading">--%>
+							<%--<h3 class="panel-title"><i class="fa fa-fw fa-table"></i> Information Feedback</h3>--%>
+						<%--</div>--%>
+						<%----%>
+					<%--</div>--%>
+				<%--</div>--%>
+			<%--</div>--%>
 			<!-- /.row -->
 			<!--
 							<div class="row">

@@ -15,6 +15,8 @@ public interface registerCowDao {
 
 	public List<CowRegistration> listCowReg();
 
+	public List<CowRegistration> listStatusCowReg();
+
 	public CowRegistration getCowById(Integer cowId);
 
 	public CowRegistration getCowByUuid(Integer cowUuid);

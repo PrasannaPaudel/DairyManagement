@@ -10,7 +10,8 @@ import java.io.Serializable;
  * Created by MUTHAKA on 2/24/2015.
  */
 @Entity @Table(name = "cowRegistration") public class CowRegistration implements Serializable {
-	@Id @Column(name = "cowId") private int cowId;
+	@Id @Column(name = "cowNo") private int cowNo;
+	@Id @Column(name = "cowId") private String cowId;
 	//    @Column(name = "cowUuid") private Integer cowUuid;
 	@Column(name = "breed") private String breed;
 	@Column(name = "gender") private String gender;
@@ -20,13 +21,7 @@ import java.io.Serializable;
 	@Column(name = "Status") private String status;
 	@Column(name = "date") private String date;
 
-	public int getCowId() {
-		return cowId;
-	}
 
-	public void setCowId(int cowId) {
-		this.cowId = cowId;
-	}
 	//    public Integer getCowUuid() {
 	//        return cowUuid;
 	//    }
@@ -34,6 +29,22 @@ import java.io.Serializable;
 	//    public void setCowUuid(Integer cowUuid) {
 	//        this.cowUuid = cowUuid;
 	//    }
+
+	public int getCowNo() {
+		return cowNo;
+	}
+
+	public void setCowNo(int cowNo) {
+		this.cowNo = cowNo;
+	}
+
+	public String getCowId() {
+		return cowId;
+	}
+
+	public void setCowId(String cowId) {
+		this.cowId = cowId;
+	}
 
 	public String getBreed() {
 		return breed;

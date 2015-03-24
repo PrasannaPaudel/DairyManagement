@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 @Entity @Table(name = "healthRecords") public class Health implements Serializable {
 	@Id @Column(name = "healthId") private int healthId;
-	@Column(name = "cowId") private int cowId;
+	@Column(name = "cowId") private String cowId;
 	@Column(name = "diseaseType") private String diseaseType;
 	@Column(name = "symptoms") private String symptoms;
 	@Column(name = "medicine") private String medicine;
@@ -26,11 +26,11 @@ import java.io.Serializable;
 		this.healthId = healthId;
 	}
 
-	public int getCowId() {
+	public String getCowId() {
 		return cowId;
 	}
 
-	public void setCowId(int cowId) {
+	public void setCowId(String cowId) {
 		this.cowId = cowId;
 	}
 

@@ -61,6 +61,25 @@ import java.security.Principal;
 		return "redirect:/dairyAdmin/cowHealth";
 	}
 
+	@RequestMapping(value = "/dairyAdmin/CowHealth/edit", method = RequestMethod.POST)
+	public String editHealth(@ModelAttribute("health") Health health, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (health.getHealthId() == 0) {
+				this.healthService.addHealth(health);
+				redirectAttributes.addFlashAttribute("message", "Saved successfully");
+			} else {
+				this.healthService.updateHealth(health);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Health not saved");
+			logger.info("##########################################################################################" + ex);
+		}
+
+		return "redirect:/dairyAdmin/viewHealth";
+	}
+
 	@RequestMapping("/dairyAdmin/CowHealth/remove/{healthId}")
 	public String removeHealth(@PathVariable("healthId") Integer healthId, RedirectAttributes redirectAttributes)
 			throws RuntimeException {

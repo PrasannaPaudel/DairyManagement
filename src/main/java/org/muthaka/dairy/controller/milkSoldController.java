@@ -61,6 +61,25 @@ import java.security.Principal;
 		return "redirect:/dairyAdmin/sellMilk";
 	}
 
+	@RequestMapping(value = "/dairyAdmin/milkSold/edit", method = RequestMethod.POST)
+	public String editMilkSold(@ModelAttribute("milkSold") MilkSold sell, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (sell.getSellId() == 0) {
+				this.milkSoldService.addMilkSold(sell);
+				redirectAttributes.addFlashAttribute("message", "Saved successfully");
+			} else {
+				this.milkSoldService.updateMilkSold(sell);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk Sold not saved");
+			logger.info("##########################################################################################" + ex);
+		}
+
+		return "redirect:/dairyAdmin/sellMilk";
+	}
+
 	@RequestMapping("/dairyAdmin/milkSold/remove/{sellId}")
 	public String removeMilkSold(@PathVariable("sellId") Integer sellId, RedirectAttributes redirectAttributes)
 			throws RuntimeException {

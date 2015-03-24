@@ -8,7 +8,7 @@
 
 body {
 	margin-top: 100px;
-	background-color: #222;
+	background-color: #f2f2f2;
 
 }
 
@@ -116,7 +116,7 @@ ul.alert-dropdown {
 
 @media (min-width: 768px) {
 	.side-nav {
-		position: fixed;
+		position: absolute;
 		top: 51px;
 		left: 225px;
 		width: 225px;

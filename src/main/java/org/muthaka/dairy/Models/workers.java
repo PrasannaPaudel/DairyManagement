@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 @Entity @Table(name = "workers") public class Workers implements Serializable {
 	@Id @Column(name = "workerId") private int workerId;
-	@Column(name = "workerUuid") private int workerUuid;
+//	@Column(name = "workerUuid") private int workerUuid;
 	@Column(name = "userId") private String userId;
 	@Column(name = "amountPaid") private int amountPaid;
 	@Column(name = "duty") private String duty;
@@ -33,13 +33,13 @@ import java.io.Serializable;
 		this.amountPaid = amountPaid;
 	}
 
-	public int getWorkerUuid() {
-		return workerUuid;
-	}
-
-	public void setWorkerUuid(int workerUuid) {
-		this.workerUuid = workerUuid;
-	}
+//	public int getWorkerUuid() {
+//		return workerUuid;
+//	}
+//
+//	public void setWorkerUuid(int workerUuid) {
+//		this.workerUuid = workerUuid;
+//	}
 
 	public String getUserId() {
 		return userId;

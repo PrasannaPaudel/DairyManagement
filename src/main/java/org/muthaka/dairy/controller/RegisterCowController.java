@@ -29,7 +29,7 @@ import java.security.Principal;
 		this.registerCowService = cowService1;
 	}
 
-	@RequestMapping(value = "/dairyAdmin/viewHerd", method = RequestMethod.GET)
+	@RequestMapping(value = "/dairyAdmin/regHerd", method = RequestMethod.GET)
 	public ModelAndView listCowReg(ModelMap modelMap, Principal principal) {
 		String dairyAdminName = principal.getName();
 		modelMap.addAttribute("dairyAdminNm", dairyAdminName);
@@ -37,7 +37,7 @@ import java.security.Principal;
 		modelMap.addAttribute("listCows", this.registerCowService.listCowReg());
 		ModelAndView cowModel = new ModelAndView();
 		cowModel.addObject(modelMap);
-		cowModel.addObject("message", "Fetched Cows successfully.");
+		cowModel.addObject("info", "Fetched Cows successfully.");
 		cowModel.setViewName("Admin/registerForm");
 		return cowModel;
 	}
@@ -55,18 +55,32 @@ import java.security.Principal;
 		return cowModel;
 	}
 
+	@RequestMapping(value = "/dairyAdmin/viewStatusCowsHerd", method = RequestMethod.GET)
+	public ModelAndView listStatusCows(ModelMap modelMap, Principal principal) {
+		String dairyAdminName = principal.getName();
+		modelMap.addAttribute("dairyAdminNm", dairyAdminName);
+		modelMap.addAttribute("dairyCows", new CowRegistration());
+		modelMap.addAttribute("listCows", this.registerCowService.listStatusCowReg());
+		ModelAndView cowModel = new ModelAndView();
+		cowModel.addObject(modelMap);
+		cowModel.addObject("message", "Fetched Cows successfully.");
+		cowModel.setViewName("Admin/viewHerdStatus");
+		return cowModel;
+	}
+
 	@RequestMapping(value = "/dairyAdmin/registerCows/save", method = RequestMethod.POST)
 	public String addCow(@ModelAttribute("cowRegistration") CowRegistration cow, RedirectAttributes redirectAttributes,
 			BindingResult bindingResult) throws RuntimeException {
 		try {
-			if (cow.getCowId() == 0) {
+			if (cow.getCowNo() == 0) {
 				if (bindingResult.hasErrors()) {
-					return "redirect:/dairyAdmin/registerCows";
-				} else {
+					return "redirect:/dairyAdmin/regHerd";
+				}
+				else {
 					this.registerCowService.addCow(cow);
 					redirectAttributes.addFlashAttribute("message", "Cow added successfully");
 				}
-			} else {
+			} else  {
 				this.registerCowService.updateCow(cow);
 				redirectAttributes.addFlashAttribute("message", "Updated successfully");
 			}
@@ -75,8 +89,9 @@ import java.security.Principal;
 			logger.info("##########################################################################################" + ex);
 		}
 
-		return "redirect:/dairyAdmin/viewHerd";
+		return "redirect:/dairyAdmin/regHerd";
 	}
+
 
 	@RequestMapping("/dairyAdmin/registerCows/remove/{cowId}")
 	public String removeCow(@PathVariable("cowId") Integer cowId, RedirectAttributes redirectAttributes)
@@ -88,7 +103,7 @@ import java.security.Principal;
 			redirectAttributes.addFlashAttribute("error", "Cow Details was not deleted");
 		}
 
-		return "redirect:/dairyAdmin/viewHerd";
+		return "redirect:/dairyAdmin/viewCowsHerd";
 	}
 
 }

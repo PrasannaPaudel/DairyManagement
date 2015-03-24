@@ -60,6 +60,26 @@ import java.security.Principal;
 		return "redirect:/dairyAdmin/breeding";
 	}
 
+
+	@RequestMapping(value = "/dairyAdmin/breeding/edit", method = RequestMethod.POST)
+	public String editBreed(@ModelAttribute("breeding") Breeding breeding, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (breeding.getBreedId() == 0) {
+				this.breedService.addBreed(breeding);
+				redirectAttributes.addFlashAttribute("message", "Edited successfully");
+			} else {
+				this.breedService.updateBreed(breeding);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Breed not Edited");
+			logger.info("##########################################################################################" + ex);
+		}
+
+		return "redirect:/dairyAdmin/viewBreeding";
+	}
+
 	@RequestMapping("/dairyAdmin/breeding/remove/{breedId}")
 	public String removeBreed(@PathVariable("breedId") Integer breedId, RedirectAttributes redirectAttributes)
 			throws RuntimeException {

@@ -3,6 +3,7 @@ package org.muthaka.dairy.dao.implementation;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.muthaka.dairy.Generators.CowId;
 import org.muthaka.dairy.Models.CowRegistration;
 import org.muthaka.dairy.dao.registerCowDao;
 import org.springframework.stereotype.Repository;
@@ -25,12 +26,16 @@ import java.util.List;
 	@Override public void addCow(CowRegistration cowReg) {
 		Session session = this.sessionFactory.getCurrentSession();
 		try {
+			String cw = new CowId().cowid();
+			cowReg.setCowId(cw);
 			session.persist(cowReg);
 			logger.info("Cow Saved SuccessFully, Cow Details=" + cowReg);
 		} catch (RuntimeException ex) {
 			session.getTransaction().rollback();
 			logger.error("Cow did not save" + ex);
 			throw ex;
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 	}
@@ -53,6 +58,21 @@ import java.util.List;
 		try {
 
 			List<CowRegistration> cowList = session.createQuery("from CowRegistration where status='' ").list();
+			for (CowRegistration cow : cowList) {
+				logger.info("Cow List::" + cow);
+			}
+			return cowList;
+		} catch (RuntimeException ex) {
+			logger.error("Cow list was not Loaded" + ex);
+			throw ex;
+		}
+	}
+
+	@SuppressWarnings("unchecked") @Override public List<CowRegistration> listStatusCowReg() {
+		Session session = this.sessionFactory.getCurrentSession();
+		try {
+
+			List<CowRegistration> cowList = session.createQuery("from CowRegistration where status!='' ").list();
 			for (CowRegistration cow : cowList) {
 				logger.info("Cow List::" + cow);
 			}

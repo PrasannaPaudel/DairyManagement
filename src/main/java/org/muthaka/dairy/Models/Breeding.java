@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Entity @Table(name = "breeding") public class Breeding implements Serializable {
 
 	@Id @Column(name = "breedId") private int breedId;
-	@Column(name = "cowId") private int cowId;
+	@Column(name = "cowId") private String cowId;
 	@Column(name = "semenType") private String semenType;
 	@Column(name = "breedingCost") private String breedingCost;
 	@Column(name = "nameOfSeminator") private String nameOfSeminator;
@@ -26,11 +26,11 @@ import java.io.Serializable;
 		this.breedId = breedId;
 	}
 
-	public int getCowId() {
+	public String getCowId() {
 		return cowId;
 	}
 
-	public void setCowId(int cowId) {
+	public void setCowId(String cowId) {
 		this.cowId = cowId;
 	}
 

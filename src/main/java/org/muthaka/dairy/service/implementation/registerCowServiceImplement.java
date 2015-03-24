@@ -32,6 +32,11 @@ public class registerCowServiceImplement implements RegisterCowService {
 		return this.regCowDAO.listCowReg();
 	}
 
+	@Override @Transactional public List<CowRegistration> listStatusCowReg() {
+
+		return this.regCowDAO.listStatusCowReg();
+	}
+
 	@Override @Transactional public CowRegistration getCowById(Integer cowId) {
 		return this.regCowDAO.getCowById(cowId);
 	}

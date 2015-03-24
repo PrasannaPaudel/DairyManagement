@@ -41,6 +41,22 @@ import java.security.Principal;
 		return milkModel;
 	}
 
+
+
+	@RequestMapping(value = "/dairyAdmin/viewGraphMilkProduction", method = RequestMethod.GET)
+	public ModelAndView listGraphMilkProduced(ModelMap modelMap, Principal principal) {
+		String dairyAdminName = principal.getName();
+		modelMap.addAttribute("dairyAdminNm", dairyAdminName);
+		modelMap.addAttribute("milkProduced", new MilkProduction());
+		modelMap.addAttribute("listMilkProduced", this.milkService.listMilkProduced());
+		ModelAndView milkModel = new ModelAndView();
+		milkModel.addObject(modelMap);
+		milkModel.addObject("message", "Fetched Milk successfully.");
+		milkModel.setViewName("Admin/blankForm");
+		return milkModel;
+	}
+
+
 	@RequestMapping(value = "/dairyAdmin/milkProduced/save", method = RequestMethod.POST)
 	public String addMilk(@ModelAttribute("milkProduction") MilkProduction milk, RedirectAttributes redirectAttributes)
 			throws RuntimeException {
@@ -58,6 +74,25 @@ import java.security.Principal;
 		}
 
 		return "redirect:/dairyAdmin/milkProduced";
+	}
+
+	@RequestMapping(value = "/dairyAdmin/milkProduced/edit", method = RequestMethod.POST)
+	public String editMilk(@ModelAttribute("milkProduction") MilkProduction milk, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (milk.getMilkId() == 0) {
+				this.milkService.addMilk(milk);
+				redirectAttributes.addFlashAttribute("message", "Saved successfully");
+			} else {
+				this.milkService.updateMilk(milk);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Milk not saved");
+			logger.info("##########################################################################################" + ex);
+		}
+
+		return "redirect:/dairyAdmin/viewMilkProduction";
 	}
 
 	@RequestMapping("/dairyAdmin/milkProduced/remove/{MilkId}")

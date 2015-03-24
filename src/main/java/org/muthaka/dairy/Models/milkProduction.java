@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 	@Id @Column(name = "milkId") private int milkId;
 	//    @Column(name = "milkProductionUuid") private String milkProductionUuid;
-	@Column(name = "cowId") private int cowId;
+	@Column(name = "cowId") private String cowId;
 	@Column(name = "time") private String time;
 	@Column(name = "amountProduced") private String amountProduced;
 	@Column(name = "date") private String date;
@@ -42,11 +42,11 @@ import java.io.Serializable;
 	//        this.milkProductionUuid = breedUuid;
 	//    }
 
-	public int getCowId() {
+	public String getCowId() {
 		return cowId;
 	}
 
-	public void setCowId(int cowId) {
+	public void setCowId(String cowId) {
 		this.cowId = cowId;
 	}
 

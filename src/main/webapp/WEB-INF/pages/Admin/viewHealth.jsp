@@ -23,6 +23,10 @@
 
 	<title>Dairy-Farm-Management</title>
 
+	<!-- jQuery -->
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+
+
 	<!-- Bootstrap Core CSS -->
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 
@@ -36,13 +40,63 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/html5shiv.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/respond.min.js"></script>
 	<![endif]-->
+
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#viewGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).add();
+			});
+		}, 2500);
+	</script>
+
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#loadGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).show();
+			});
+		}, 2500);
+	</script>
+	<!-- modal update cow js -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".cowUpdate").click(function () { // Click to only happen on announce links
+				$("#healthId").val($(this).data('hid'));
+				$("#cowId").val($(this).data('cid'));
+				$("#diseaseType").val($(this).data('dt'));
+				$("#symptoms").val($(this).data('s'));
+				$("#medicine").val($(this).data('m'));
+				$("#treatmentCost").val($(this).data('tc'));
+				$("#date").val($(this).data('d'));
+				$('#cowUpdate').modal('show');
+			});
+		});
+	</script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('a[data-confirm]').click(function (ev) {
+				var href = $(this).attr('href');
+				if (!$('#dataConfirmModal').length) {
+					$('body').append('<div class="modal fade" id="dataConfirmModal" tabindex="-1" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header bg-black"><h4 class="modal-title center" id="myModalLabel">Please Confirm</h4></div><div class="modal-body center"></div><div class="modal-footer"><a class="btn btn-danger btn-sm" id="dataConfirmOK"><i class="ion ion-ios7-trash"></i> Delete</a><button class="btn btn-info btn-sm" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove"></i> Cancel</button></div></div></div></div>');
+				}
+				$('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+				$('#dataConfirmOK').attr('href', href);
+				$('#dataConfirmModal').modal({show: true});
+				return false;
+			});
+		});
+	</script>
+
 
 </head>
 
 <body>
+
+<c:url var="editAction" value="/dairyAdmin/CowHealth/edit"/>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <c:url var="logout" value="/j_spring_security_logout"/>
 <div id="wrapper">
@@ -182,7 +236,7 @@
 					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 				</li>
 				<li>
-					<a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+					<a href="${contextPath}/dairyAdmin/regHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
 				</li>
 				<li>
 					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
@@ -312,10 +366,16 @@
 											<td>${health.treatmentCost}</td>
 											<td>${health.date}</td>
 											<td width="40px">
-												<a href="<c:url value="/dairyAdmin/CowHealth/remove/${health.healthId}"/>"
-												   class="btn btn-sm btn-danger"
-												   data-confirm="Are you sure you want to delete?"><i
-														class="ion ion-ios7-trash"></i> Delete</a>
+												<a href="#"
+												   class="btn btn-danger btn-sm cowUpdate " data-toggle="tooltip"
+												   data-placement="top" title="Edit"
+												   data-hid="${health.healthId}"
+												   data-cid="${health.cowId}"
+												   data-dt="${health.diseaseType}"
+												   data-s="${health.symptoms}"
+												   data-m="${health.medicine}"
+												   data-tc="${health.treatmentCost}"
+												   data-d="${health.date}"><i class="fa fa-bucket">Edit</i></a>
 
 											</td>
 
@@ -357,6 +417,142 @@
 
 
 		</div>
+
+		<!-- Modal -->
+		<%--Start cow update modal--%>
+		<form:form action="${editAction}" commandName="health"
+		           id="health" method="post">
+			<div class="modal fade" id="cowUpdate" tabindex="-1" role="dialog"
+			     aria-labelledby="studentsAddition" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header  bg-black">
+							<a href="#" class="btn btn-danger btn-sm closebtn" aria-hidden="true"
+							   data-dismiss="modal"><i class="ion ion-ios7-trash"></i> Close</a>
+							<h4 class="modal-title center" id="cowUpdatemodal">Cow
+								Update</h4>
+						</div>
+						<div class="modal-body" id="modalUpdateCow">
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Cow Id : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="cowId" name="cowId"  readonly/>
+									</div>
+								</div>
+
+
+								<div class="col-lg-6">
+									<label>Disease Type : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="diseaseType" name="diseaseType"  />
+									</div>
+								</div>
+
+							</div>
+							<br/>
+
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Symptom :</label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input class="form-control" type="text" id="symptoms" name="symptoms" />
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<label>Medicine : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="medicine" name="medicine"  />
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Treatment Cost : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="treatmentCost" name="treatmentCost" />
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<label>Date of Sickness :</label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input class="form-control" type="text" id="date" name="date"  readonly/>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6">
+										<%--<label>Health Id :</label>--%>
+
+									<div class="input-group">
+											<%--<span class="input-group-addon"><i class="fa fa-user"></i></span>--%>
+										<input class="form-control" type="hidden" id="healthId" name="healthId" />
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="row">
+								<div class="col-lg-4">
+								</div>
+								<div class="col-lg-4">
+									<button class="btn btn-success pull-right" type="submit">
+										<i
+												class="fa fa-check-circle-o"></i> Submit
+									</button>
+								</div>
+								<div class="col-lg-4">
+									<a href="#" class="btn btn-danger btn-sm closebtn pull-right" aria-hidden="true"
+									   data-dismiss="modal"><i class="ion ion-ios7-trash "></i> Cancel</a>
+								</div>
+									<%--<div class="col-lg-4">--%>
+									<%--<button class="btn btn-danger pull-right" type="reset"><i--%>
+									<%--class="fa fa-ban"></i>--%>
+									<%--Reset--%>
+									<%--</button>--%>
+									<%--</div>--%>
+							</div>
+							<br/>
+						</div>
+						<div class="modal-footer">
+							<p class="text-center small-box-footer">Copyrights &copy;
+								2015 DFMS |
+								Designed &amp;
+								Maintained
+								by : <a rel="nofollow"
+								        href="http://www.api-crafttech.com"
+								        target="_blank">PETSAMOD</a> <a
+										rel="nofollow"
+										href=""></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form:form>
+		<%--End cow update modal--%>
+
 		<!-- /.container-fluid -->
 
 	</div>
@@ -365,8 +561,6 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>

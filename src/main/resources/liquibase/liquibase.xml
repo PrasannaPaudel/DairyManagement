@@ -206,7 +206,7 @@
 			<!--<column name="milkProductionUuid" type="varchar(255)">-->
 			<!--<constraints nullable="true" unique="false"/>-->
 			<!--</column>-->
-			<column name="cowId" type="int">
+			<column name="cowId" type="varchar(45)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="time" type="varchar(20)">
@@ -224,12 +224,15 @@
 	<changeSet id="dairyFarming-v1.0.4" author="Peter Muthaka">
 		<comment>This table will handle registration of Cows</comment>
 		<createTable tableName="cowRegistration">
-			<column name="cowId" autoIncrement="true" type="int">
+			<column name="cowNo" autoIncrement="true" type="int">
 				<constraints nullable="false" primaryKey="true"/>
 			</column>
 			<!--<column name="cowUuid" type="varchar(255)">-->
 			<!--<constraints nullable="true" unique="false"/>-->
 			<!--</column>-->
+			<column name="cowId"  type="varchar(45)">
+				<constraints primaryKey="true" nullable="false" unique="true" />
+			</column>
 			<column name="breed" type="varchar(45)">
 				<constraints nullable="false"/>
 			</column>
@@ -264,7 +267,7 @@
 			<!--<column name="healthUuid" type="varchar(255)">-->
 			<!--<constraints nullable="false" unique="true"/>-->
 			<!--</column>-->
-			<column name="cowId" type="int">
+			<column name="cowId" type="varchar(45)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="diseaseType" type="varchar(45)">
@@ -295,7 +298,7 @@
 			<!--<column name="breedUuid" type="varchar(255)">-->
 			<!--<constraints unique="true" nullable="false"/>-->
 			<!--</column>-->
-			<column name="cowId" type="int">
+			<column name="cowId" type="varchar(45)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="semenType" type="varchar(45)">
@@ -321,7 +324,7 @@
 			<column name="dairyId" autoIncrement="true" type="int">
 				<constraints nullable="false" primaryKey="true"/>
 			</column>
-			<column name="cowId" type="int">
+			<column name="cowId" type="varchar(45)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="mealType" type="varchar(255)">

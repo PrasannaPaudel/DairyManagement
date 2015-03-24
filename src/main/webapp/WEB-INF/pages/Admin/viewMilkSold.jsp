@@ -23,6 +23,9 @@
 
 	<title>Dairy-Farm-Management</title>
 
+	<!-- jQuery -->
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+
 	<!-- Bootstrap Core CSS -->
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 
@@ -36,9 +39,25 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/html5shiv.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/respond.min.js"></script>
 	<![endif]-->
+
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#viewGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).add();
+			});
+		}, 2500);
+	</script>
+
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#loadGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).show();
+			});
+		}, 2500);
+	</script>
 
 </head>
 
@@ -182,7 +201,7 @@
 					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 				</li>
 				<li>
-					<a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+					<a href="${contextPath}/dairyAdmin/regHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
 				</li>
 				<li>
 					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
@@ -293,7 +312,7 @@
 
 										<th>Customer-ID</th>
 										<th>Time</th>
-										<th>Quantity in Liter</th>
+										<th>Quantity in Liters</th>
 										<th>Total Cost</th>
 										<th>Date</th>
 										<th width="40px"></th>
@@ -311,10 +330,18 @@
 											<td>${milkSold.total}</td>
 											<td>${milkSold.date}</td>
 											<td width="40px">
-												<a href="<c:url value="/dairyAdmin/milkSold/remove/${milkSold.customerId}"/>"
-												   class="btn btn-sm btn-danger"
-												   data-confirm="Are you sure you want to delete?"><i
-														class="ion ion-ios7-trash"></i> Delete</a>
+												<a href="#"
+												   class="btn btn-danger btn-sm cowUpdate " data-toggle="tooltip"
+												   data-placement="top" title="Edit"
+												   data-id="${dairyCows.cowId}"
+												   data-no="${dairyCows.cowNo}"
+												   data-b="${dairyCows.breed}"
+												   data-g="${dairyCows.gender}"
+												   data-db="${dairyCows.dob}"
+												   data-st="${dairyCows.status}"
+												   data-r="${dairyCows.relatedTo}"
+												   data-rp="${dairyCows.relationship}"
+												   data-dt="${dairyCows.date}"><i class="fa fa-bucket">Edit</i></a>
 
 											</td>
 
@@ -358,6 +385,164 @@
 
 
 		</div>
+
+		<!-- Modal -->
+		<%--Start cow update modal--%>
+		<form:form action="${editAction}" commandName="cowRegistration"
+		           id="cowRegistration" method="post">
+			<div class="modal fade" id="cowUpdate" tabindex="-1" role="dialog"
+			     aria-labelledby="studentsAddition" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header  bg-black">
+							<a href="#" class="btn btn-danger btn-sm closebtn" aria-hidden="true"
+							   data-dismiss="modal"><i class="ion ion-ios7-trash"></i> Close</a>
+							<h4 class="modal-title center" id="cowUpdatemodal">Cow
+								Update</h4>
+						</div>
+						<div class="modal-body" id="modalUpdateCow">
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Cow Id : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="cowId" name="cowId"  readonly/>
+									</div>
+								</div>
+
+
+								<div class="col-lg-6">
+									<label>Breed : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="breed1" name="breed"  />
+									</div>
+								</div>
+
+							</div>
+							<br/>
+
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Registration Date :</label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input class="form-control" type="text" id="date1" name="date" readonly/>
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<label>Gender : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="gender1" name="gender"  />
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Cow No : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="cowNo" name="cowNo"  readonly/>
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<label>Date of Birth :</label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input class="form-control" type="text" id="dob1" name="dob"  />
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+
+								<div class="col-lg-6">
+									<label>Related To : </label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+										<input class="form-control" type="text" id="relatedTo1" name="relatedTo" />
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<label>Relationship :</label>
+
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input class="form-control" type="text" id="relationship1" name="relationship" />
+									</div>
+								</div>
+
+
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6">
+										<%--<label>Reason to Remove Cow :</label>--%>
+
+									<div class="input-group">
+											<%--<span class="input-group-addon"><i class="fa fa-user"></i></span>--%>
+										<input class="form-control" type="hidden" id="Status1" name="Status" />
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="row">
+								<div class="col-lg-4">
+								</div>
+								<div class="col-lg-4">
+									<button class="btn btn-success pull-right" type="submit">
+										<i
+												class="fa fa-check-circle-o"></i> Submit
+									</button>
+								</div>
+								<div class="col-lg-4">
+									<a href="#" class="btn btn-danger btn-sm closebtn pull-right" aria-hidden="true"
+									   data-dismiss="modal"><i class="ion ion-ios7-trash "></i> Cancel</a>
+								</div>
+									<%--<div class="col-lg-4">--%>
+									<%--<button class="btn btn-danger pull-right" type="reset"><i--%>
+									<%--class="fa fa-ban"></i>--%>
+									<%--Reset--%>
+									<%--</button>--%>
+									<%--</div>--%>
+							</div>
+							<br/>
+						</div>
+						<div class="modal-footer">
+							<p class="text-center small-box-footer">Copyrights &copy;
+								2015 DFMS |
+								Designed &amp;
+								Maintained
+								by : <a rel="nofollow"
+								        href="http://www.api-crafttech.com"
+								        target="_blank">PETSAMOD</a> <a
+										rel="nofollow"
+										href=""></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form:form>
+		<%--End cow update modal--%>
+
 		<!-- /.container-fluid -->
 
 	</div>
@@ -366,8 +551,7 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>

@@ -26,7 +26,10 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Milk-Production</title>
+	<title>Health</title>
+
+	<!-- jQuery -->
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -41,9 +44,25 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-
+	<script src="${pageContext.request.contextPath}/resources/js/html5shiv.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/respond.min.js"></script>
 	<![endif]-->
 
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#viewGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).add();
+			});
+		}, 2500);
+	</script>
+
+	<script type="text/javascript">
+		window.setTimeout(function () {
+			$("#loadGroup_message_alert").fadeTo(500, 0).slideUp(500, function () {
+				$(this).show();
+			});
+		}, 2500);
+	</script>
 </head>
 
 <body onload="load()">
@@ -192,7 +211,7 @@
 					<a href="${contextPath}/dairyAdmin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 				</li>
 				<li>
-					<a href="${contextPath}/dairyAdmin/registerCows"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
+					<a href="${contextPath}/dairyAdmin/regHerd"><i class="fa fa-fw fa-edit"></i> Register a Cow</a>
 				</li>
 				<li>
 					<a href="${contextPath}/dairyAdmin/milkProduced"><i class="fa fa-fw fa-edit"></i> Enter Milk Produced</a>
@@ -256,6 +275,15 @@
 			<!-- /.row -->
 
 			<div class="row">
+				<c:if test="${not empty error}">
+					<div class="alert alert-danger" id="viewGroup_error_alert"><i class="fa fa-ban"></i> ${error}
+					</div>
+				</c:if>
+
+				<c:if test="${not empty info}">
+					<div class="alert alert-info" id="loadGroup_message_alert"><i
+							class="fa fa-info-circle"></i> ${info}</div>
+				</c:if>
 				<form role="form" action="${addAction}" commandName="health" method="post">
 					<div class="col-lg-6">
 
@@ -264,7 +292,7 @@
 							<select class="form-control" name="cowId" id="cowId">
 								<option value="">Select</option>
 								<% while (resultset.next()) { %>
-								<option value="<%= resultset.getString(1)%>"><%= resultset.getString(1)%>
+								<option value="<%= resultset.getString(2)%>"><%= resultset.getString(2)%>
 								</option>
 								<% } %>
 
@@ -307,6 +335,10 @@
 			</div>
 			<!-- /.row -->
 
+			<c:if test="${not empty message}">
+				<div class="alert alert-success" id="viewGroup_message_alert"><i
+						class="fa fa-check"></i> ${message}</div>
+			</c:if>
 		</div>
 		<!-- /.container-fluid -->
 

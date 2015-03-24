@@ -9,122 +9,122 @@
   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="org.muthaka.dairy.controller" />
-    <context:property-placeholder location="classpath:database.properties"/>
-    <mvc:annotation-driven/>
-    <mvc:resources mapping="resources/**" location="/resources/"/>
-    <tx:annotation-driven transaction-manager="transactionManager"/>
-    <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<context:component-scan base-package="org.muthaka.dairy.controller"/>
+	<context:property-placeholder location="classpath:database.properties"/>
+	<mvc:annotation-driven/>
+	<mvc:resources mapping="resources/**" location="/resources/"/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<bean id="dataSource"
+	      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
-        <property name="driverClassName" value="${database.driver}"/>
-        <property name="url" value="${database.url}"/>
-        <property name="username" value="${database.user}"/>
-        <property name="password" value="${database.password}"/>
-    </bean>
+		<property name="driverClassName" value="${database.driver}"/>
+		<property name="url" value="${database.url}"/>
+		<property name="username" value="${database.user}"/>
+		<property name="password" value="${database.password}"/>
+	</bean>
 
-    <bean
-            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+	<bean
+			class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
 
-    <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="changeLog" value="classpath:liquibase/liquibase.xml"/>
-        <property name="defaultSchema" value="dairyFarm"/>
-    </bean>
-
-
-    <bean id="savedRequestAwareAuthenticationSuccessHandler"
-          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-        <property name="targetUrlParameter" value="targetUrl"/>
-    </bean>
-
-    <!-- Hibernate 4 SessionFactory Bean definition -->
-    <bean id="hibernate4AnnotatedSessionFactory"
-          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="annotatedClasses">
-            <list>
-                <value>org.muthaka.dairy.Models.Breeding</value>
-                <value>org.muthaka.dairy.Models.CowRegistration</value>
-                <value>org.muthaka.dairy.Models.Customers</value>
-                <value>org.muthaka.dairy.Models.DairyFeeds</value>
-                <value>org.muthaka.dairy.Models.Health</value>
-                <value>org.muthaka.dairy.Models.MilkProduction</value>
-                <value>org.muthaka.dairy.Models.Staff</value>
-                <value>org.muthaka.dairy.Models.Workers</value>
-                <value>org.muthaka.dairy.Models.Users</value>
-                <value>org.muthaka.dairy.Models.MilkSold</value>
-            </list>
-        </property>
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
-                </prop>
-                <prop key="hibernate.show_sql">true</prop>
-            </props>
-        </property>
-    </bean>
+	<bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="changeLog" value="classpath:liquibase/liquibase.xml"/>
+		<property name="defaultSchema" value="dairyFarm"/>
+	</bean>
 
 
-    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
+	<bean id="savedRequestAwareAuthenticationSuccessHandler"
+	      class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+		<property name="targetUrlParameter" value="targetUrl"/>
+	</bean>
 
-    <bean id="breedDao" class="org.muthaka.dairy.dao.implementation.breedDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="breedService" class="org.muthaka.dairy.service.implementation.breedServiceImplement">
-        <property name="breedDao" ref="breedDao"/>
-    </bean>
-    <bean id="customerDao" class="org.muthaka.dairy.dao.implementation.customerDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="customerService" class="org.muthaka.dairy.service.implementation.customerServiceImplement">
-        <property name="customerDao" ref="customerDao"/>
-    </bean>
-    <bean id="healthDao" class="org.muthaka.dairy.dao.implementation.healthDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="healthService" class="org.muthaka.dairy.service.implementation.healthServiceImplement">
-        <property name="healthDao" ref="healthDao"/>
-    </bean>
-    <bean id="mealDao" class="org.muthaka.dairy.dao.implementation.mealDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="mealService" class="org.muthaka.dairy.service.implementation.MealServiceImplement">
-        <property name="mealDao" ref="mealDao"/>
-    </bean>
-    <bean id="milkDao" class="org.muthaka.dairy.dao.implementation.milkDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="milkService" class="org.muthaka.dairy.service.implementation.milkServiceImplement">
-        <property name="milkDao" ref="milkDao"/>
-    </bean>
-    <bean id="registerCowDao" class="org.muthaka.dairy.dao.implementation.registerCowDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="registerCowService" class="org.muthaka.dairy.service.implementation.registerCowServiceImplement">
-        <property name="regCowDAO" ref="registerCowDao"/>
-    </bean>
-    <bean id="workersDao" class="org.muthaka.dairy.dao.implementation.WorkersDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="workersService" class="org.muthaka.dairy.service.implementation.workerServiceImplement">
-        <property name="workersDao" ref="workersDao"/>
-    </bean>
-    <bean id="usersDao" class="org.muthaka.dairy.dao.implementation.UsersDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="usersService" class="org.muthaka.dairy.service.implementation.UsersServiceImplement">
-        <property name="usersDao" ref="usersDao"/>
-    </bean>
-    <bean id="soldDao" class="org.muthaka.dairy.dao.implementation.milkSoldDaoImplement">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="milkSoldService" class="org.muthaka.dairy.service.implementation.milkSoldServiceImplement">
-        <property name="soldDAO" ref="soldDao"/>
-    </bean>
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<bean id="hibernate4AnnotatedSessionFactory"
+	      class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="annotatedClasses">
+			<list>
+				<value>org.muthaka.dairy.Models.Breeding</value>
+				<value>org.muthaka.dairy.Models.CowRegistration</value>
+				<value>org.muthaka.dairy.Models.Customers</value>
+				<value>org.muthaka.dairy.Models.DairyFeeds</value>
+				<value>org.muthaka.dairy.Models.Health</value>
+				<value>org.muthaka.dairy.Models.MilkProduction</value>
+				<value>org.muthaka.dairy.Models.Staff</value>
+				<value>org.muthaka.dairy.Models.Workers</value>
+				<value>org.muthaka.dairy.Models.Users</value>
+				<value>org.muthaka.dairy.Models.MilkSold</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+
+	<bean id="breedDao" class="org.muthaka.dairy.dao.implementation.breedDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="breedService" class="org.muthaka.dairy.service.implementation.breedServiceImplement">
+		<property name="breedDao" ref="breedDao"/>
+	</bean>
+	<bean id="customerDao" class="org.muthaka.dairy.dao.implementation.customerDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="customerService" class="org.muthaka.dairy.service.implementation.customerServiceImplement">
+		<property name="customerDao" ref="customerDao"/>
+	</bean>
+	<bean id="healthDao" class="org.muthaka.dairy.dao.implementation.healthDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="healthService" class="org.muthaka.dairy.service.implementation.healthServiceImplement">
+		<property name="healthDao" ref="healthDao"/>
+	</bean>
+	<bean id="mealDao" class="org.muthaka.dairy.dao.implementation.mealDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="mealService" class="org.muthaka.dairy.service.implementation.MealServiceImplement">
+		<property name="mealDao" ref="mealDao"/>
+	</bean>
+	<bean id="milkDao" class="org.muthaka.dairy.dao.implementation.milkDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="milkService" class="org.muthaka.dairy.service.implementation.milkServiceImplement">
+		<property name="milkDao" ref="milkDao"/>
+	</bean>
+	<bean id="registerCowDao" class="org.muthaka.dairy.dao.implementation.registerCowDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="registerCowService" class="org.muthaka.dairy.service.implementation.registerCowServiceImplement">
+		<property name="regCowDAO" ref="registerCowDao"/>
+	</bean>
+	<bean id="workersDao" class="org.muthaka.dairy.dao.implementation.WorkersDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="workersService" class="org.muthaka.dairy.service.implementation.workerServiceImplement">
+		<property name="workersDao" ref="workersDao"/>
+	</bean>
+	<bean id="usersDao" class="org.muthaka.dairy.dao.implementation.UsersDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="usersService" class="org.muthaka.dairy.service.implementation.UsersServiceImplement">
+		<property name="usersDao" ref="usersDao"/>
+	</bean>
+	<bean id="soldDao" class="org.muthaka.dairy.dao.implementation.milkSoldDaoImplement">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+	</bean>
+	<bean id="milkSoldService" class="org.muthaka.dairy.service.implementation.milkSoldServiceImplement">
+		<property name="soldDAO" ref="soldDao"/>
+	</bean>
 </beans>

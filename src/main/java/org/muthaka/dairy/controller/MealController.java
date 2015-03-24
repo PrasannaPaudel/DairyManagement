@@ -60,6 +60,25 @@ import java.security.Principal;
 		return "redirect:/dairyAdmin/mealTaken";
 	}
 
+	@RequestMapping(value = "/dairyAdmin/mealTaken/edit", method = RequestMethod.POST)
+	public String editFeed(@ModelAttribute("dairyFeeds") DairyFeeds dairyfeeds, RedirectAttributes redirectAttributes)
+			throws RuntimeException {
+		try {
+			if (dairyfeeds.getDairyId() == 0) {
+				this.mealService.addFeeds(dairyfeeds);
+				redirectAttributes.addFlashAttribute("message", "Edited successfully");
+			} else {
+				this.mealService.updateFeeds(dairyfeeds);
+				redirectAttributes.addFlashAttribute("message", "Updated successfully");
+			}
+		} catch (RuntimeException ex) {
+			redirectAttributes.addFlashAttribute("error", "Feeds not Edited");
+			logger.info("##########################################################################################" + ex);
+		}
+
+		return "redirect:/dairyAdmin/viewFeeds";
+	}
+
 	@RequestMapping("/dairyAdmin/mealTaken/remove/{dairyId}")
 	public String removeMilk(@PathVariable("dairyId") Integer FeedId, RedirectAttributes redirectAttributes)
 			throws RuntimeException {
